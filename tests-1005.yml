@@ -84,6 +84,31 @@ features:
               name: TxnFilterTest
               descriptions:
                 - desc: "AND(filter, AND(...), OR(...), NOT(...))"
+          - test:
+              id: 20cb5b36-d9fb-4c63-bd68-37394f2c0524
+              name: tackler-core::filter::logic_and
+              descriptions:
+                - desc: "AND(true, true, true)"
+          - test:
+              id: 80b9bcbc-1274-440b-8e63-4be23bc6caa2
+              name: tackler-core::filter::logic_and
+              descriptions:
+                - desc: "AND(false, true, true)"
+          - test:
+              id: 87107bc2-3c6d-435c-ac05-9ddade8352be
+              name: tackler-core::filter::logic_and
+              descriptions:
+                - desc: "AND(AND(true,false), AND(true,true)"
+          - test:
+              id: d7c618df-3840-4cb3-b703-0896168ab448
+              name: tackler-core::filter::logic_and
+              descriptions:
+                - desc: "AND(AND(true,true),  AND(true,false)"
+          - test:
+              id: b48c2765-12a7-4679-82e9-263f023fe731
+              name: tackler-core::filter::logic_and
+              descriptions:
+                - desc: "AND(AND(true,true),  AND(true,true)"
 
   - feature:
       id: 1036aa18-21b8-436f-8319-d77f1b446cb0
@@ -161,6 +186,31 @@ features:
               name: TxnFilterTest
               descriptions:
                 - desc: "OR(filter, AND(...), OR(...), NOT(...))"
+          - test:
+              id: 99741d27-f4f1-4f2d-acee-925605c5b9ef
+              name: tackler-core::filter::logic_or
+              descriptions:
+                - desc: "OR(false, false, false)"
+          - test:
+              id: a17735b6-6847-4eaa-b66e-1eb27c81f73a
+              name: tackler-core::filter::logic_or
+              descriptions:
+                - desc: "OR(true, false, false)"
+          - test:
+              id: 4ca33e34-ee6d-4ba8-9bc2-3e5c1a98d5d0
+              name: tackler-core::filter::logic_or
+              descriptions:
+                - desc: "OR(OR(false,false), OR(true,false)"
+          - test:
+              id: c2ea859a-1daa-4c9c-8bdf-278ce74dfc02
+              name: tackler-core::filter::logic_or
+              descriptions:
+                - desc: "OR(OR(true,false),  OR(false,false)"
+          - test:
+              id: ce4115c4-9051-4e9e-9a95-71de92f61520
+              name: tackler-core::filter::logic_or
+              descriptions:
+                - desc: "OR(OR(false,false), OR(false,false)"
 
   - feature:
       id: 408c026b-0d31-4d38-9f09-b21505b15ce4
@@ -197,7 +247,11 @@ features:
               name: TxnFilterTest
               descriptions:
                 - desc: "NOT(AND(...))"
-
+          - test:
+              id: dac1a5b1-9128-452f-94d9-06ab163b0a02
+              name: tackler-core::filter::logic_not
+              descriptions:
+                - desc: "NOT(NOT(true)"
   - feature:
       id: 7c0d146b-fec7-4f25-8a9e-b4b591a93ecf
       parent: ab7695f6-9fba-4f5d-9d55-ea2c502b4ea4
@@ -356,21 +410,6 @@ features:
               desc: "reject JSON OR filter with only one filter"
         operations:
           - test:
-              id: 4cce4204-16b1-40a4-b1ea-ce11272d5824
-              name: TxnFilterJsonTest
-              descriptions:
-                - desc: "decode from JSON and then encode to text"
-          - test:
-              id: 3624a7b3-3668-45ee-9580-aa64fb955a33
-              name: TxnFilterJsonTest
-              descriptions:
-                - desc: "encode to JSON"
-          - test:
-              id: f3213817-fe0c-4bec-b6be-b3396bad8114
-              name: TxnFilterJsonTest
-              descriptions:
-                - desc: "encode to TEXT"
-          - test:
               id: 2b56249e-4dff-445f-b30c-427c7c29e8e1
               name: TxnFilterJsonTest
               descriptions:
@@ -385,6 +424,186 @@ features:
               name: TxnFilterJsonTest
               descriptions:
                 - desc: "decode from JSON working filter"
+          - test:
+              id: caa264f6-719f-49e9-9b56-3bdf0b0941ec
+              name: TxnFilterLogicTest
+              descriptions:
+                - desc: "AND, JSON"
+          - test:
+              id: deda9918-cba5-4b3d-85db-61a3a7e1128f
+              name: TxnFilterLogicTest
+              descriptions:
+                - desc: "AND, Text"
+          - test:
+              id: eddb393f-b8a4-4189-9280-40a911417b70
+              name: TxnFilterLogicTest
+              descriptions:
+                - desc: "OR, JSON"
+          - test:
+              id: 18959315-233a-4ede-8ec9-537951d45c6d
+              name: TxnFilterLogicTest
+              descriptions:
+                - desc: "OR, Text"
+          - test:
+              id: 8416ffe5-f07b-4304-85ca-be3a3e15f5e7
+              name: TxnFilterLogicTest
+              descriptions:
+                - desc: "NOT, JSON"
+          - test:
+              id: 22482f84-2d21-48eb-8161-c16dfa8f9920
+              name: TxnFilterLogicTest
+              descriptions:
+                - desc: "NOT, Text"
+          - test:
+              id: baa0038e-45b7-4911-a647-859de2da4716
+              name: TxnFilterHeaderTest
+              descriptions:
+                - desc: "TxnTSBegin, JSON"
+          - test:
+              id: c01de4f4-0e07-4d8d-a4c8-2d1ad28df264
+              name: TxnFilterHeaderTest
+              descriptions:
+                - desc: "TxnTSBegin, Text"
+          - test:
+              id: db171b86-7435-4e9b-bfa0-4288c720289c
+              name: TxnFilterHeaderTest
+              descriptions:
+                - desc: "TxnTSEnd, JSON"
+          - test:
+              id: ef2348e6-3684-4a13-85e9-5aec89a9e3bb
+              name: TxnFilterHeaderTest
+              descriptions:
+                - desc: "TxnTSEnd, Text"
+          - test:
+              id: 928a78b4-0ad7-4909-b145-3826acc75b3d
+              name: TxnFilterHeaderTest
+              descriptions:
+                - desc: "TxnCode, JSON"
+          - test:
+              id: 274ccbb4-dcd7-431d-bf05-5da1b191d74c
+              name: TxnFilterHeaderTest
+              descriptions:
+                - desc: "TxnCode, Text"
+          - test:
+              id: 9cb8321a-0c43-4a24-b21e-0286dbe503cd
+              name: TxnFilterHeaderTest
+              descriptions:
+                - desc: "TxnDescription, JSON"
+          - test:
+              id: ea88d0cf-2c60-45ac-835d-6f2f18a2c10d
+              name: TxnFilterHeaderTest
+              descriptions:
+                - desc: "TxnDescription, Text"
+          - test:
+              id: 9ad41df9-c153-458b-a941-3b4763c25548
+              name: TxnFilterHeaderTest
+              descriptions:
+                - desc: "TxnUUID, JSON"
+          - test:
+              id: e388aecd-8500-4f89-98c6-9588199c104f
+              name: TxnFilterHeaderTest
+              descriptions:
+                - desc: "TxnUUID, Text"
+          - test:
+              id: 05bfe9c0-0dc1-462a-b452-39c2eaf55d02
+              name: TxnFilterHeaderTest
+              descriptions:
+                - desc: "BBoxLatLon, JSON"
+          - test:
+              id: 89d31f9c-029f-47ce-acb9-ddfaaa089782
+              name: TxnFilterHeaderTest
+              descriptions:
+                - desc: "BBoxLatLon, Text"
+          - test:
+              id: c027ef27-3287-411f-aad9-8185f1b55380
+              name: TxnFilterHeaderTest
+              descriptions:
+                - desc: "BBoxLatLonAlt, JSON"
+          - test:
+              id: 54528f53-49fc-43cf-b3a2-221e02e87bcc
+              name: TxnFilterHeaderTest
+              descriptions:
+                - desc: "BBoxLatLonAlt, Text"
+          - test:
+              id: 38c85ae0-8c60-4533-946d-c80b788dc262
+              name: TxnFilterHeaderTest
+              descriptions:
+                - desc: "TxnTags, JSON"
+          - test:
+              id: 423ccf5f-4dc7-49fb-a972-5a9c09717140
+              name: TxnFilterHeaderTest
+              descriptions:
+                - desc: "TxnTags, Text"
+          - test:
+              id: de0054ff-92e2-4837-b223-40cbbeaa90de
+              name: TxnFilterHeaderTest
+              descriptions:
+                - desc: "TxnComments, JSON"
+          - test:
+              id: 5f08fe58-4451-4659-a684-d9725259ce2d
+              name: TxnFilterHeaderTest
+              descriptions:
+                - desc: "TxnComments, Text"
+          - test:
+              id: 44d80d6d-b2cf-47a0-a228-bb2ea068f9f5
+              name: TxnFilterPostingTest
+              descriptions:
+                - desc: "PostingAccount, JSON"
+          - test:
+              id: 382e7f39-90e6-44f0-9162-150e2b353cef
+              name: TxnFilterPostingTest
+              descriptions:
+                - desc: "PostingAccount, Text"
+          - test:
+              id: 55401f74-0054-42ec-ab0b-17d4c9cda0be
+              name: TxnFilterPostingTest
+              descriptions:
+                - desc: "PostingComment, JSON"
+          - test:
+              id: a1b05b26-3cca-4e56-925d-7ae7602f941a
+              name: TxnFilterPostingTest
+              descriptions:
+                - desc: "PostingComment, Text"
+          - test:
+              id: b7b4543d-2ffa-488f-b251-af5a7ba7204f
+              name: TxnFilterPostingTest
+              descriptions:
+                - desc: "PostingAmountEqual, JSON"
+          - test:
+              id: c0f88d70-c388-4c4f-9cca-f29b921dbc41
+              name: TxnFilterPostingTest
+              descriptions:
+                - desc: "PostingAmountEqual, Text"
+          - test:
+              id: 3dbd4103-66ee-4747-8eae-75d6b13bdb29
+              name: TxnFilterPostingTest
+              descriptions:
+                - desc: "PostingAmountLess, JSON"
+          - test:
+              id: c0725d0c-2261-4a98-982f-4a62c4f9c7da
+              name: TxnFilterPostingTest
+              descriptions:
+                - desc: "PostingAmountLess, Text"
+          - test:
+              id: 66d6ee10-a18e-4615-9e7a-1569c793fe46
+              name: TxnFilterPostingTest
+              descriptions:
+                - desc: "PostingAmountGreater, JSON"
+          - test:
+              id: f940a623-f4b6-4937-86ff-c05ddc1921d6
+              name: TxnFilterPostingTest
+              descriptions:
+                - desc: "PostingAmountGreater, Text"
+          - test:
+              id: b7b43b0f-0046-4d25-8f61-2ef419b84f0b
+              name: TxnFilterPostingTest
+              descriptions:
+                - desc: "PostingCommodity, JSON"
+          - test:
+              id: 15d83e84-11a6-4ec2-a458-82fea493f10f
+              name: TxnFilterPostingTest
+              descriptions:
+                - desc: "PostingCommodity, Text"
 
   - feature:
       id: 1c0ead5d-4f4c-44d8-b21e-29a2ad31ee8e
