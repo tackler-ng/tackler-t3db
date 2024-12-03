@@ -197,7 +197,7 @@ features:
               id: 20ce2b43-e433-4edb-894a-48e955cdcd01
               name: tests/audit/ok/audit-1E2-07.exec
               descriptions:
-                - desc: "SHA-384: metadata: subset by filter, regex account selector"
+                - desc: "SHA3-512: metadata: subset by filter, regex account selector"
               references:
                 - ref: equity
                   formats: txn
@@ -207,3 +207,20 @@ features:
                   formats: txt, json
                 - ref: register
                   formats: txt, json
+
+          - test:
+              id: 85d16b5a-cde9-40d3-9a37-3b7ba7ee7049
+              name: tests/audit/ok/audit-1E2-08.exec
+              descriptions:
+                - desc: "metadata: subset by complex filter"
+                - desc: "equity export: metadata with complex filter"
+              references:
+                - ref: equity
+                  formats: txn
+                - ref: balance
+                  formats: txt, json
+                - ref: balance-group
+                  formats: txt, json
+                - ref: register
+                  formats: txt, json
+

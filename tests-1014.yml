@@ -13,6 +13,11 @@ features:
                 - desc: "integer and decimal"
                 - desc: "with commodity"
                 - desc: "with warning (no equity posting)"
+          - test:
+              id: c2e27940-a141-41ed-adc2-da294d519804
+              name: reporting-equity.sh
+              descriptions:
+                - desc: "rusty version of 78982e06-4f11-4f52-8689-df400b8c3a93"
   - feature:
       id: a3e74b65-8a05-45ff-857a-43d843e145e1
       parent: e5434121-1112-4379-8729-3504912f56a8
@@ -66,6 +71,12 @@ features:
               name: reporting/ok/equity-tep1014-01.exec
               descriptions:
                 - desc: "test correct MathContext with equity sum line (scala bug 11592)"
+                - desc: "verify Equity account name set by configuration"
+          - test:
+              id: 8542680a-2e94-437f-b0a5-cdef46ef8521
+              name: reporting-equity.sh
+              descriptions:
+                - desc: "Exercise maximum precision of rust_decimal"
                 - desc: "verify Equity account name set by configuration"
           - test:
               refid: 7d95bef8-6aaa-4706-a276-d206752d017b

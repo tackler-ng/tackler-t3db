@@ -1,0 +1,176 @@
+features:
+  - feature:
+      id: e5b6d02a-9b43-424c-96e1-44d15555a634 
+      subject: Tackler-ng
+      tests:
+        operations:
+          - test:
+              id: 0609e72f-c509-4b62-950e-fce432122d10
+              name: "tackler-core/src/model/account_tree_node.rs"
+              descriptions:
+                - desc: "err_empty_sub"
+          - test:
+              id: 26da0769-de5f-4344-b1d4-d3ddbf3f7f5a
+              name: "tackler-core/src/model/posting.rs"
+              descriptions:
+                - desc: "preserve_precision_1E15"
+          - test:
+              id: 270d505b-76f6-4e49-a24c-2fbdfb6e5adf
+              name: "tackler-core/src/model/account_tree_node.rs"
+              descriptions:
+                - desc: "commodity_ok"
+          - test:
+              id: 38c103d3-4cc7-4af7-86cd-bf24ca37d026
+              name: "tackler-core/src/model/account_tree_node.rs"
+              descriptions:
+                - desc: "atn_three"
+          - test:
+              id: 5081594a-ecaf-4232-9c93-1d84ea7600eb
+              name: "tackler-core/src/parser/tests/txn_header_desc.rs"
+              descriptions:
+                - desc: "ok_code_and_description"
+          - test:
+              id: 55407835-34d8-4de9-a362-4172f0e4d54b
+              name: "tackler-core/src/model/account_tree_node.rs"
+              descriptions:
+                - desc: "err_empty"
+          - test:
+              id: 699aadb1-d1ba-44b6-ae6a-158cf5be13e5
+              name: "tackler-core/src/model/account_tree_node.rs"
+              descriptions:
+                - desc: "commodity_err"
+          - test:
+              id: 76a6c300-5569-4e1d-a0a1-ae2ee31d919a
+              name: "tackler-core/src/model/account_tree_node.rs"
+              descriptions:
+                - desc: "atn_more"
+          - test:
+              id: 88c5cb23-5995-4b93-8c26-a3f7374e96d9
+              name: "tackler-core/src/model/account_tree_node.rs"
+              descriptions:
+                - desc: "atn_root"
+          - test:
+              id: e11d5d26-c149-4d8c-b150-5cb2e2f80608
+              name: "tackler-core/src/model/account_tree_node.rs"
+              descriptions:
+                - desc: "atn_commodity"
+          - test:
+              id: fc69f9b2-1faf-425c-87d3-aed63d66171b
+              name: "tackler-core/src/model/account_tree_node.rs"
+              descriptions:
+                - desc: "atn_two"
+          - test:
+              id: 23ffc331-dc31-4fe8-9783-ba2e26f3365e
+              name: "tackler-core/src/filter/posting/posting_account.rs"
+              descriptions:
+                - desc: "verify independence between account and commodity (account)"
+          - test:
+              id: 3689e065-0372-46d0-a912-73a08a9b5fa2
+              name: "tackler-core/src/filter/posting/posting_commodity.rs"
+              descriptions:
+                - desc: "verify independence between account and commodity (commodity II)"
+          - test:
+              id: 3bca6d7b-e515-42d8-b65b-2780b0c0d7e0
+              name: "tackler-core/src/filter/txn/txn_description.rs"
+              descriptions:
+                - desc: "TxnFilter::TxnFilterTxnCode"
+          - test:
+              id: 3d3d06cb-fcf2-422a-b57d-1bdb08f7d65e
+              name: "tackler-core/src/filter/txn/txn_ts_end.rs"
+              descriptions:
+                - desc: "TxnFilter::TxnFilterTxnTSEnd"
+          - test:
+              id: 3e461f5b-d1fe-4e2e-aca3-c205f64befd7
+              name: "tackler-core/src/filter/txn/txn_uuid.rs"
+              descriptions:
+                - desc: "TxnFilter::TxnFilterTxnUUID"
+          - test:
+              id: 42dfcaca-b407-437e-9bc0-7f9618c1636e
+              name: "tackler-core/src/filter/txn/txn_ts_begin.rs"
+              descriptions:
+                - desc: "TxnFilter::TxnFilterTxnTSBegin"
+          - test:
+              id: 49129f9c-f75d-464f-b8d0-485d8880b6b2
+              name: "tackler-core/src/filter/posting/posting_commodity.rs"
+              descriptions:
+                - desc: "verify independence between account and commodity (commodity I)"
+          - test:
+              id: 50edcbf2-5373-45f5-8c66-8ec7471001fe
+              name: "tackler-core/src/filter/posting/posting_commodity.rs"
+              descriptions:
+                - desc: "TxnFilter::TxnFilterPostingCommodity"
+          - test:
+              id: 5405a3cd-504f-4668-af57-563cbbe10298
+              name: "tackler-core/src/filter/txn/txn_bbox_lat_lon_alt.rs"
+              descriptions:
+                - desc: "TxnFilter::TxnFilterBBoxLatLonAlt"
+          - test:
+              id: 57673de0-cd11-491d-98f6-a0bb3b44df80
+              name: "tackler-core/src/filter/posting/posting_amount_equal.rs"
+              descriptions:
+                - desc: "TxnFilter::TxnFilterPostingAmountEqual"
+          - test:
+              id: 593648ab-8973-4c80-b4e9-82e4011f9e32
+              name: "tackler-core/src/filter/txn/txn_comments.rs"
+              descriptions:
+                - desc: "TxnFilter::TxnFilterTxnComments"
+          - test:
+              id: 5a195125-4fd0-413b-984b-4e3ca0899edb
+              name: "tackler-api/src/filters/txn/txn_ts_end.rs"
+              descriptions:
+                - desc: "TxnTSEnd, JSON with Zulu zone"
+          - test:
+              id: 5e90f6cb-4414-4d4e-a496-1bb26abb9ba1
+              name: "tackler-api/src/filters/filter_definition.rs"
+              descriptions:
+                - desc: "filter definition, Text"
+          - test:
+              id: 78412bff-ef54-41e5-aed8-c1bf6965a4e6
+              name: "tackler-core/src/filter/txn/txn_bbox_lat_lon.rs"
+              descriptions:
+                - desc: "TxnFilter::TxnFilterBBoxLatLon"
+          - test:
+              id: 7f2a2dd7-6a5c-4f59-8000-1ee451e1540f
+              name: "tackler-api/src/filters/txn/txn_ts_begin.rs"
+              descriptions:
+                - desc: "TxnTSBegin, JSON with Zulu zone"
+          - test:
+              id: 82ff060b-11c4-4b91-8e3f-2298f0a201af
+              name: "tackler-core/src/filter/txn/txn_tags.rs"
+              descriptions:
+                - desc: "TxnFilter::TxnFilterTxnTags"
+          - test:
+              id: 939516a3-3c7a-4af8-b8fc-bcec2839965d
+              name: "tackler-api/src/filters/filter_definition.rs"
+              descriptions:
+                - desc: "decode txn filter from base64 armored JSON"
+          - test:
+              id: c10b209c-7da7-4e44-acb1-a7b739ccddd5
+              name: "tackler-core/src/filter/posting/posting_account.rs"
+              descriptions:
+                - desc: "TxnFilter::TxnFilterPostingAccount"
+          - test:
+              id: c245f18e-44e1-4d89-ba2f-0e6283fd5c37
+              name: "tackler-core/src/filter/posting/posting_amount_less.rs"
+              descriptions:
+                - desc: "TxnFilter::TxnFilterPostingAmountLess"
+          - test:
+              id: c6fe4f86-1daa-4e29-b327-467aed6dc5bb
+              name: "tackler-api/src/filters/filter_definition.rs"
+              descriptions:
+                - desc: "filter definition, JSON"
+          - test:
+              id: dde614b5-d368-4550-98bd-dc2e2e36aa9e
+              name: "tackler-core/src/filter/posting/posting_amount_greater.rs"
+              descriptions:
+                - desc: "TxnFilter::TxnFilterPostingAmountGreater"
+          - test:
+              id: e8517888-b459-4ecf-a622-592fd16aa067
+              name: "tackler-core/src/filter/posting/posting_comment.rs"
+              descriptions:
+                - desc: "TxnFilter::TxnFilterPostingComment"
+          - test:
+              id: e8addeae-4f6c-46d4-9031-bced93e2b07b
+              name: "tackler-core/src/filter/txn/txn_code.rs"
+              descriptions:
+                - desc: "TxnFilter::TxnFilterTxnCode"
