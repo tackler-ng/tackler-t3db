@@ -199,4 +199,25 @@ features:
                 - ref: balance
                 - ref: balance-group
                 - ref: register
+  - feature:
+      id: 6bbdc218-ab67-415e-9dfa-c1528098cbfa
+      parent: 06b4a9b1-f48c-4b33-8811-1f32cdc44d7b
+      subject: "revspecs support"
+      tests:
+        operations:
+          - test:
+              id: 82fe2414-9e20-45da-8f7f-6f21ae8c71f2
+              name: audit-1E2-09
+              descriptions:
+                - desc: "ref with rev operands (^^)"
+          - test:
+              id: 248707bc-7c58-4bab-a4a6-4cc1471fd936
+              name: audit-1E2-10
+              descriptions:
+                - desc: "full commit id as ref"
+          - test:
+              id: 0ae6dfb6-0975-49bc-8744-f7a4143a6ead
+              name: audit-1E2-11
+              descriptions:
+                - desc: "abbreviated commit id as ref"
 ### GIT END
