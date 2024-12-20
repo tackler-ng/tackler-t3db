@@ -133,7 +133,16 @@ features:
                   formats: txt, json
                 - ref: register
                   formats: txt, json
-
+          - test:
+              id: 5c34d752-8d17-40df-be91-5dc1b107478e
+              name: tests/audit/ok/audit-1E1-03.exec
+              descriptions:
+                - desc: "Account Selector Checksum"
+                - desc: "Full haystack regex match with simple selector"
+                - desc: "Sorting order of selectors"
+              references:
+                - ref: balance
+                  formats: txt
           - test:
               id: b2ea4102-40a2-46e5-aca3-398cf4849058
               name: tests/audit/ok/audit-1E2-03.exec
