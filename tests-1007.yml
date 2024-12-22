@@ -143,6 +143,20 @@ features:
               references:
                 - ref: balance
                   formats: txt
+                - ref: balance-group
+                  formats: txt
+                - ref: register
+                  formats: txt
+          - test:
+              refid: 85d16b5a-cde9-40d3-9a37-3b7ba7ee7049
+              descriptions:
+                - desc: "Account Selector Checksum"
+                - desc: "Full haystack regex match with simple selector"
+                - desc: "Sorting order of selectors"
+              references:
+                - ref: equity
+                  formats: txn
+
           - test:
               id: b2ea4102-40a2-46e5-aca3-398cf4849058
               name: tests/audit/ok/audit-1E2-03.exec
@@ -223,6 +237,7 @@ features:
               descriptions:
                 - desc: "metadata: subset by complex filter"
                 - desc: "equity export: metadata with complex filter"
+                - desc: "Full haystack regex match with simple selector"
               references:
                 - ref: equity
                   formats: txn

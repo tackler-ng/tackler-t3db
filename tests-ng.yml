@@ -174,3 +174,59 @@ features:
               name: "tackler-core/src/filter/txn/txn_code.rs"
               descriptions:
                 - desc: "TxnFilter::TxnFilterTxnCode"
+  - feature:
+      id: 0396beec-3017-48c3-a295-46bcb0242c92
+      parent: e5b6d02a-9b43-424c-96e1-44d15555a634
+      subject: "full haystack match"
+      tests:
+        operations:
+          - test:
+              id: 2d01669b-b051-4550-9436-ac31e84dd892
+              name: "tackler-api/src/filters/posting/posting_amount_less.rs"
+              descriptions:
+                - desc: "PostingAmountLess, full haystack match"
+          - test:
+              id: 2e005db0-f3f5-4ef4-a574-ed3371d4f5c9
+              name: "tackler-api/src/filters/txn/txn_code.rs"
+              descriptions:
+                - desc: "TxnCode, full haystack match"
+          - test:
+              id: 3debf0d5-599f-41a2-9d5f-e16a54cb1e3e
+              name: "tackler-api/src/filters/txn/txn_comments.rs"
+              descriptions:
+                - desc: "TxnComment, full haystack match"
+          - test:
+              id: 8609eb58-f600-42d1-a20a-c7de2c57e6e2
+              name: "tackler-api/src/filters/posting/posting_amount_greater.rs"
+              descriptions:
+                - desc: "PostingAmountGreater, full haystack match"
+          - test:
+              id: c63d9ff7-6039-474b-8b8a-be6b8927510f
+              name: "tackler-api/src/filters/posting/posting_amount_equal.rs"
+              descriptions:
+                - desc: "PostingAmountEqual, full haystack match"
+          - test:
+              id: d2aa8d62-97cb-49e1-ac7b-f81a1a511b6b
+              name: "tackler-api/src/filters/txn/txn_tags.rs"
+              descriptions:
+                - desc: "TxnTags, full haystack match"
+          - test:
+              id: d2fbabba-f37c-4245-bf7a-0fed4db82695
+              name: "tackler-api/src/filters/posting/posting_commodity.rs"
+              descriptions:
+                - desc: "PostingCommodity, full haystack match"
+          - test:
+              id: df851a3a-80b8-49ca-9dfa-f7b5ce122ddf
+              name: "tackler-api/src/filters/posting/posting_comment.rs"
+              descriptions:
+                - desc: "PostingComment, full haystack match"
+          - test:
+              id: f2a52f9d-1fd6-428d-9bb4-7821d1f15ce3
+              name: "tackler-api/src/filters/txn/txn_description.rs"
+              descriptions:
+                - desc: "TxnDescription, full haystack match"
+          - test:
+              id: fdb5c728-1354-4905-8bc0-42c17cc6d948
+              name: "tackler-api/src/filters/posting/posting_account.rs"
+              descriptions:
+                - desc: "PostingAccount, full haystack match"
