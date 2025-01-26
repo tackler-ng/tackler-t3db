@@ -256,13 +256,24 @@ features:
       id: 7c0d146b-fec7-4f25-8a9e-b4b591a93ecf
       parent: ab7695f6-9fba-4f5d-9d55-ea2c502b4ea4
       subject: "Txn time based filters"
-
+      tests:
+        operations:
+          - test:
+              id: 8bbe1d2a-8548-49cf-9d8b-942242b882bd
+              name: "audit-1E2-08"
+              descriptions:
+                - desc: "timestamp with 'Z[UTC]' offset/zone"
   - feature:
       id: 35597046-0d16-47b0-924c-877e14d648da
       parent: 7c0d146b-fec7-4f25-8a9e-b4b591a93ecf
       subject: "Txn time filter: begin"
       tests:
         operations:
+          - test:
+              id: 9002e6e1-cee5-4751-a3e0-c64cea0091e6
+              name: txn_ts_begin_json_with_nano
+              descriptions:
+                - desc: "TxnTSBegin, JSON with nanoseconds"
           - test:
               id: 701b2c27-d33c-4460-9a5e-64316c6ed946
               name: TxnFilterTSBeginTest
@@ -290,6 +301,11 @@ features:
       subject: "Txn time filter: end"
       tests:
         operations:
+          - test:
+              id: 98df4e3a-2ca4-4b55-b4a8-358a46331e65
+              name: txn_ts_end_json_with_nano
+              descriptions:
+                - desc: "TxnTSEnd, JSON with nanoseconds"
           - test:
               id: 42a42f07-dea5-45ee-b563-187f9121e1e1
               name: TxnFilterTSEndTest
