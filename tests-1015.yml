@@ -2,4 +2,94 @@ features:
   - feature:
       id: 98c2b696-d250-4141-bd82-c4126ec11c1d
       subject: "Price data support"
-
+  - feature:
+      id: 4d6f0dac-c202-45f4-9b95-7682d6c8df94
+      parent: 98c2b696-d250-4141-bd82-c4126ec11c1d
+      subject: "Price conversions"
+      tests:
+        errors:
+          - error:
+              id: uuid
+              name: "todo: name of test class/method or test description file"
+              desc: "todo: description"
+        operations:
+          - test:
+              id: 7cbe3cb4-1b23-44bb-8e5e-ba2c8991e589
+              name: "price/ok/price.sh: price-00"
+              descriptions:
+                - desc: "No conversion"
+              references:
+                - ref: balance
+                - ref: balance-group
+                - ref: register
+                - ref: identity
+                - ref: equity
+          - test:
+              id: 6ddcb0d4-7dc6-4909-a1b4-ecbb5a33a186
+              name: "price/ok/price.sh: price-01"
+              descriptions:
+                - desc: "price-before: txn-time"
+              references:
+                - ref: balance
+                - ref: balance-group
+                - ref: register
+                - ref: identity
+                - ref: equity
+          - test:
+              id: af19f8e7-a6f2-4f64-8c5a-b774dba4f58c
+              name: "price/ok/price.sh: price-02"
+              descriptions:
+                - desc: "price-before: last-price"
+              references:
+                - ref: balance
+                - ref: balance-group
+                - ref: register
+                - ref: identity
+                - ref: equity
+          - test:
+              id: 4075e741-605b-4e67-ab7d-0d13f38956ca
+              name: "price/ok/price.sh: price-03"
+              descriptions:
+                - desc: "TODO: This feature is not implemented"
+                - desc: "conv: filter: ts-end"
+              references:
+                - ref: balance
+                - ref: balance-group
+                - ref: register
+                - ref: identity
+                - ref: equity
+          - test:
+              id: 0c600957-5c15-42d0-9bb9-b618ad7d597f
+              name: "price/ok/price.sh: price-04"
+              descriptions:
+                - desc: "TODO: This feature is not implemented"
+                - desc: "conv: filter: ts-end > last txn-ts"
+              references:
+                - ref: balance
+                - ref: balance-group
+                - ref: register
+                - ref: identity
+                - ref: equity
+          - test:
+              id: 39c60c8b-b999-4305-8c57-5c06e99cc919
+              name: "price/ok/price.sh: price-05"
+              descriptions:
+                - desc: "price-before: given-time"
+              references:
+                - ref: balance
+                - ref: balance-group
+                - ref: register
+                - ref: identity
+                - ref: equity
+          - test:
+              id: f7211562-c69d-4bab-a768-65b15803efdf
+              name: "price/ok/price.sh: price-06"
+              descriptions:
+                - desc: "price-before: given-time"
+                - desc: "timestamp > last txn-ts"
+              references:
+                - ref: balance
+                - ref: balance-group
+                - ref: register
+                - ref: identity
+                - ref: equity

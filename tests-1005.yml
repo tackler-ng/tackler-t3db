@@ -259,7 +259,7 @@ features:
       tests:
         operations:
           - test:
-              id: 8bbe1d2a-8548-49cf-9d8b-942242b882bd
+              id: 17d027aa-28d0-4887-b2dd-f342dccb61d1
               name: "audit-1E2-08"
               descriptions:
                 - desc: "timestamp with 'Z[UTC]' offset/zone"
