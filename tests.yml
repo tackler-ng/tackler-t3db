@@ -1088,6 +1088,26 @@ features:
 
 # CLI START
   - feature:
+      id: 21481c57-74e7-443f-8de5-407f6a4cb0b0
+      subject: "cli: new journal"
+      tests:
+        operations:
+          - test:
+              id: a405a6f4-be40-429d-a027-1ec80734dec2
+              name: "tests/sh/new-and-init.sh new-01"
+              descriptions:
+                - desc: "create new journal"
+  - feature:
+      id: a20466fa-996e-4561-95b6-bff205ab7cf0
+      subject: "cli: init journal"
+      tests:
+        operations:
+          - test:
+              id: 720220ba-ba95-44f4-86d0-9390afa462de
+              name: "tests/sh/new-and-init.sh init-01"
+              descriptions:
+                - desc: "init journal"
+  - feature:
       id: 32f0054b-6c82-42e4-a109-4f624b7e1d4d
       subject: "cli: args: error handling"
       tests:

@@ -15,7 +15,7 @@ features:
         operations:
           - test:
               id: 7cbe3cb4-1b23-44bb-8e5e-ba2c8991e589
-              name: "price/ok/price.sh: price-00"
+              name: "price/ok/price-strict.sh: price-00"
               descriptions:
                 - desc: "No conversion"
               references:
@@ -24,34 +24,49 @@ features:
                 - ref: register
                 - ref: identity
                 - ref: equity
+  - feature:
+      id: 2dcf5643-c67c-412f-a635-7594a618ef53
+      parent: 4d6f0dac-c202-45f4-9b95-7682d6c8df94
+      subject: "Price: txn-time"
+      tests:
           - test:
               id: 6ddcb0d4-7dc6-4909-a1b4-ecbb5a33a186
-              name: "price/ok/price.sh: price-01"
+              name: "price/ok/price-strict.sh: price-01"
               descriptions:
-                - desc: "price-before: txn-time"
+                - desc: "txn-time"
               references:
                 - ref: balance
                 - ref: balance-group
                 - ref: register
                 - ref: identity
                 - ref: equity
+  - feature:
+      id: c86c55e1-e0ae-4e99-9ef1-be16b4f7a797
+      parent: 4d6f0dac-c202-45f4-9b95-7682d6c8df94
+      subject: "Price: last-price"
+      tests:
           - test:
               id: af19f8e7-a6f2-4f64-8c5a-b774dba4f58c
-              name: "price/ok/price.sh: price-02"
+              name: "price/ok/price-strict.sh: price-02"
               descriptions:
-                - desc: "price-before: last-price"
+                - desc: "last-price"
               references:
                 - ref: balance
                 - ref: balance-group
                 - ref: register
                 - ref: identity
                 - ref: equity
+  - feature:
+      id: cc331fca-7a77-45d2-8129-65f9891ad7a2
+      parent: 4d6f0dac-c202-45f4-9b95-7682d6c8df94
+      subject: "Price: given-time"
+      tests:
           - test:
               id: 4075e741-605b-4e67-ab7d-0d13f38956ca
-              name: "price/ok/price.sh: price-03"
+              name: "price/ok/price-strict.sh: price-03"
               descriptions:
-                - desc: "TODO: This feature is not implemented"
-                - desc: "conv: filter: ts-end"
+                - desc: "given-time"
+                - desc: "filter: ts-end"
               references:
                 - ref: balance
                 - ref: balance-group
@@ -60,7 +75,7 @@ features:
                 - ref: equity
           - test:
               id: 0c600957-5c15-42d0-9bb9-b618ad7d597f
-              name: "price/ok/price.sh: price-04"
+              name: "price/ok/price-strict.sh: price-04"
               descriptions:
                 - desc: "TODO: This feature is not implemented"
                 - desc: "conv: filter: ts-end > last txn-ts"
@@ -72,7 +87,7 @@ features:
                 - ref: equity
           - test:
               id: 39c60c8b-b999-4305-8c57-5c06e99cc919
-              name: "price/ok/price.sh: price-05"
+              name: "price/ok/price-strict.sh: price-05"
               descriptions:
                 - desc: "price-before: given-time"
               references:
@@ -83,10 +98,21 @@ features:
                 - ref: equity
           - test:
               id: f7211562-c69d-4bab-a768-65b15803efdf
-              name: "price/ok/price.sh: price-06"
+              name: "price/ok/price-strict.sh: price-06"
               descriptions:
                 - desc: "price-before: given-time"
                 - desc: "timestamp > last txn-ts"
+              references:
+                - ref: balance
+                - ref: balance-group
+                - ref: register
+                - ref: identity
+                - ref: equity
+          - test:
+              id: e1754c8d-ac71-4344-942f-0c78d69bb1b3
+              name: "price/ok/price-strict.sh: price-07"
+              descriptions:
+                - desc: "given-time after last available price, e.g. == last-price"
               references:
                 - ref: balance
                 - ref: balance-group

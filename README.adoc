@@ -1,26 +1,22 @@
 = Tackler Test Tracking Database (T3DB)
 
-T3DB is Tackler's test tracking "database" for feature and test tracking.
+This is link:https://github.com/tackler-ng/tackler[Tackler]'s test tracking "database" 
+(T3DB) for feature and test tracking.
 
-Tackler Test Tracking Database tracks features and tests of those features.
 Main purpose of T3DB is to ensure all features and error paths of those features
-are tested and validated, minimize amount of overlapping tests and
-prevent duplicate test cases.
+are tested and validated, with minimal amount of overlapping and duplicate test cases.
 
-T3DB also provides reverse mapping from test cases back to features which are validated
+T3DB also provides reverse mapping from test cases back to features, which are validated
 by that particular test case.
 
 
 == Performance testing
 
 Tackler performance test setup and actual results described in
-link:https://gitlab.com/e257/accounting/tackler/-/blob/main/perf/readme.adoc[Tackler performance test setup] document.
+link:https://github.com/tackler-ng/tackler/blob/main/perf/readme.adoc[Tackler performance test setup] document.
 
 
 == T3DB files
-
-image:https://gitlab.com/e257/accounting/tackler/badges/main/pipeline.svg["Build status", link="https://gitlab.com/e257/accounting/tackler/-/jobs/"]
-image:https://gitlab.com/e257/accounting/tackler/badges/main/coverage.svg["Coverage", link="https://gitlab.com/e257/accounting/tackler/-/jobs/"]
 
 T3DB consist of following files:
 
@@ -96,6 +92,10 @@ link:./tests-1013.yml[T3DB for TEP-1013]::
 link:./tests-1014.yml[T3DB for TEP-1014]::
 
 * Equity Features and Enhancements
+
+link:./tests-1015.yml[T3DB for TEP-1015]::
+
+* Commodity Price Data Support
 
 
 link:./tests-tmpl.yml[Template for T3DB entry]

@@ -132,7 +132,7 @@ features:
                 - desc: "balgrp: date"
                 - desc: "register: full"
   - feature:
-      id:  d8d63ca4-9675-4287-ba4e-53b6a329e390
+      id: d8d63ca4-9675-4287-ba4e-53b6a329e390
       parent: c085aec4-8e0f-4571-bf50-0dc16dba411e
       subject: "Timestamp style selector for register report"
       tests:
