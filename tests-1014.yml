@@ -78,6 +78,7 @@ features:
               descriptions:
                 - desc: "Exercise maximum precision of rust_decimal"
                 - desc: "verify Equity account name set by configuration"
+                - desc: "rusty variant of 8542680a-2e94-437f-b0a5-cdef46ef8521"
           - test:
               refid: 7d95bef8-6aaa-4706-a276-d206752d017b
               name: ./reporting/ok/register-acc-01.exec

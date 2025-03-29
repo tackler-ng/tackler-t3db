@@ -39,12 +39,12 @@ features:
                 - desc: "out of spec: alt < -6378137"
           - error:
               id: f1951382-c746-4be0-b367-f903c8c9fb18
-              name: tests/location/ex/TacklerParseException-format.exec
+              name: tests/sh/location-errors.sh
               descriptions:
                 - desc: "cli: error propagation in case of format error"
           - error:
               id: d948d0cd-d06c-4772-be5c-46e8875e4910
-              name: tests/location/ex/TacklerException-values.exec
+              name: tests/sh/location-errors.sh
               descriptions:
                 - desc: "cli: error propagation in case of invalid value"
         reports:

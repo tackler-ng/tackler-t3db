@@ -6,12 +6,20 @@ features:
         errors:
           - error:
               id: 4078aee1-b2e7-40fc-ae82-661d29cbaa74
-              name: tests/parser/ex/perr-01.exec
+              name: tackler-core/src/parser/tests/tackler_txns.rs
               desc: account with missing indentation
           - error:
               id: 399fb5f8-0f03-4aa7-8f2e-1ae8ab2d6645
-              name: tests/parser/ex/perr-03.exec
-              desc: missing blank line
+              name: tackler-core/src/parser/tests/tackler_txns.rs
+              desc: missing blank line between txns
+          - error:
+              id: e23d8e3f-db93-425d-8f3d-690f6d8d84a6
+              name: tackler-core/src/parser/tests/tackler_txns.rs
+              desc: "#1: catch multispace0 without line ending between txns"
+          - error:
+              id: efa25d85-96e4-435b-88c1-0728551c2c2a
+              name: tackler-core/src/parser/tests/tackler_txns.rs
+              desc: "#2: case-2 catch multispace0 without line ending between txns"
         operations:
           - test:
               id: ba71f292-cc3e-406f-991e-8dd82a7cf87c
@@ -33,10 +41,6 @@ features:
               id: 0e2a5c79-0594-4c4f-aa65-b31bff877b53
               name: tests/parser/ex/perr-by-shard-01.exec
               desc: parser error with shard data
-          - error:
-              id: 90d57e1a-eda6-4856-b757-bfc678ac2a82
-              name: tests/cli/ex/TxnException-empty-txns-01.exec
-              desc: "cli: missing input txn.dir (empty txn set with glob)"
           - error:
               id: 8722a7e2-04fd-4b32-a259-e16ca882a725
               name: tests/core/ex/TxnException-empty-txns-01.exec
@@ -396,7 +400,7 @@ features:
         errors:
           - error:
               id: fd2e49c0-bb60-4f5b-8ddd-f3745fcc6015
-              name: tests/parser/ex/perr-code.exec
+              name: tackler-core/src/parser/tests/tackler_txns.rs
               desc: Ensure that code is not over eager in case of txn syntax error
         operations:
           - test:
@@ -655,12 +659,8 @@ features:
               name: PostingTest
           - error:
               id: 71d06779-dce9-4499-b54a-0af85b33ac44
-              name: tests/core/ex/TxnException-zero-posting.exec
+              name: tests/sh/core-fs-errors.sh
               desc: "posting with zero amount (by input file)"
-          - error:
-              id: 144bd8b1-aa94-4454-a490-b0e8fdaddc1e
-              name: tests/core/ex/TxnException-zero-posting-01.exec
-              desc: "posting with zero amount (by conf & empty dir)"
 
 ### Reports
   - feature:
@@ -670,8 +670,8 @@ features:
         errors:
           - error:
               id: 88ef188c-b8f8-47f0-88b6-7af3577aa133
-              name: tests/reporting/ex/ReportException-unknown-type.exec
-              desc: "conf: reporting.reports unknown report"
+              name: tests/sh/reporting-errors.sh
+              desc: "conf: report.targets unknown report"
         reports:
           balance:
             - test:
@@ -741,7 +741,7 @@ features:
         errors:
           - error:
               id: 31e0bd80-d4a9-4d93-915d-fa2424aedb84
-              name: tests/reporting/ex/GroupByException-unknown-group-by.exec
+              name: tests/sh/reporting-errors.sh
               desc: Unknown group-by operator
         operations:
           - test:
@@ -1097,6 +1097,16 @@ features:
               name: "tests/sh/new-and-init.sh new-01"
               descriptions:
                 - desc: "create new journal"
+          - test:
+              id: eddeb65b-630b-4d8b-a236-f9caa298a08b
+              name: "tests/sh/new-and-init.sh"
+              descriptions:
+                - desc: "new with price"
+          - test:
+              id: ffe35948-b42d-4b43-a71a-483d1da048bc
+              name: "tests/sh/new-and-init.sh"
+              descriptions:
+                - desc: "new with price, strict"
   - feature:
       id: a20466fa-996e-4561-95b6-bff205ab7cf0
       subject: "cli: init journal"
@@ -1145,21 +1155,18 @@ features:
         operations:
           - test:
               refid: 9f0d3896-ce0b-415b-8d96-ad40e5177b45
-              desc: --input.file
+              desc: "--input.file"
 
   - feature:
       id: db7ca808-4eef-44a9-b61e-3811c41b642a
-      subject: "cli: args: reporting.reports"
+      subject: "cli: args: reports"
       tests:
         operations:
           - test:
               id: 9f0d3896-ce0b-415b-8d96-ad40e5177b45
-              name: tests/  reporting/ok/cli-args-01.exec
+              refid: 1d2c22c1-e3fa-4cd4-a526-45318c15d13e
               descriptions:
-                - desc: --reporting.reports
-              references:
-                - ref: balance
-                - ref: balance-group
+                - desc: "--reports"
 
   - feature:
       id: 780ed0b3-cbb6-4bfb-82a5-c70ae94e2d15
@@ -1175,29 +1182,20 @@ features:
 
   - feature:
       id: 6b8b9f4a-20e8-45e7-b0ea-1daf99d6589b
-      subject: "cli: args: reporting.accounts"
+      subject: "cli: args: accounts"
       tests:
         operations:
           - test:
               id: 25d62f31-e420-4c46-8397-664983753c7f
-              name: tests/reporting/ok/cli-args-02.exec
+              refid: 76da1ba6-b17d-4260-bc2d-7d1dcca54d50
               descriptions:
-                - desc: --reporting.accounts
-              references:
-                - ref: balance
-                - ref: balance-group
+                - desc: "--accounts"
 
   - feature:
       id: d78b7fec-502e-404e-b5d2-8551f96bcf8c
       subject: "cli: args: reporting.console"
       tests:
         operations:
-          - test:
-              id: fd250432-9b13-4cdd-83a1-1aedff1593ed
-              name: tests/cli/ok/console-03.exec
-              descriptions:
-                - desc: validate stdout + stderr
-                - desc: "conf: console = off, --reporting.console=true"
           - test:
               id: fe7017ec-8c26-463b-bf6f-9c2d3cd83220
               name: tests/reporting/ok/cli-args-04.exec
@@ -1216,12 +1214,9 @@ features:
         operations:
           - test:
               id: 3ef0b17b-3e0f-4033-962b-0ca1de8d2ca4
-              name: tests/reporting/ok/cli-args-03.exec
+              refid: 82fe2414-9e20-45da-8f7f-6f21ae8c71f2
               descriptions:
                 - desc: "CLI Args: --reporting.reports, --reporting.accounts"
-              references:
-                - ref: balance
-                - ref: balance-group
 
   - feature:
       id: 4d07602f-c3f2-4a26-9166-3f371e6670d2
@@ -1265,11 +1260,6 @@ features:
       id: 7ae035a1-3ebc-43f4-87af-0439e2d3b2e5
       subject: "cli: args: input.fs.dir"
       tests:
-        errors:
-          - error:
-              id: 97c7193f-281f-4103-b5e2-7397433ba79c
-              name: tests/cli/ex/NoSuchFileException-txn.dir-not-found-01.exec
-              desc: file not found (txn.input.dir)
         operations:
           - test:
               refid: 31a128f5-d1a2-4d93-beee-6599344ece57
@@ -1299,15 +1289,4 @@ features:
               id: f04577b6-49b2-460f-92f6-7886a4b49152
               name: tests/cli/ex/NoSuchFileException-output-not-found-01.exec
               desc: output path not found
-          - error:
-              id: a9a8c149-a584-45e5-b4f1-0f901cfd1831
-              name: tests/cli/ok/console-04.exec
-              desc: no output, no console (this is WARN at the moment)
-        operations:
-          - test:
-              refid: 25d62f31-e420-4c46-8397-664983753c7f
-              name: tests/reporting/ok/cli-args-02.exec
-          - test:
-              refid: 940ed68b-7f1c-41fe-bab9-aefd8cf60b3a
-              name: tests/cli/ok/console-01.exec
 ### CLI END

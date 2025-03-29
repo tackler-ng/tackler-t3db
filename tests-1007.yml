@@ -50,13 +50,13 @@ features:
 
           - error:
               id: 24f154c7-9681-497b-a28c-c90cfb0533a5
-              name:  tests/audit/ex/TacklerException-audit-01.exec
+              name: tests/sh/audit-errors.sh
               descriptions:
                 - desc: "missing UUID with txn-set-checksum"
 
           - error:
               id: 78f82210-7e9b-4741-9a0f-cc69636c70c4
-              name:  tests/audit/ex/TacklerException-audit-01.exec
+              name: tests/sh/audit-errors.sh
               descriptions:
                 - desc: "duplicate UUIDs with txn-set-checksum"
 

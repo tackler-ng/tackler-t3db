@@ -9,15 +9,53 @@ features:
       tests:
         errors:
           - error:
-              id: uuid
-              name: "todo: name of test class/method or test description file"
-              desc: "todo: description"
+              id: 0a7fa119-797f-4744-821e-44af958675c9
+              name: "tests/sh/price-errors.sh"
+              descriptions:
+                - desc: "wrong type (txn-time) by conf vs. given-time"
+          - error:
+              id: 2b3d0fb2-2a55-4604-bf89-fc50e52aa69d
+              name: "tests/sh/price-errors.sh"
+              descriptions:
+                - desc: "wrong type (txn-time) by cli vs. given-time"
+          - error:
+              id: adae9328-c7b8-42f5-8d85-099b012c4138
+              name: "tests/sh/price-errors.sh"
+              descriptions:
+                - desc: "wrong type (none) by cli vs. given-time"
+          - error:
+              id: f8c64b01-66c5-4541-b3d5-24b83f44666b
+              name: "tests/sh/price-errors.sh"
+              descriptions:
+                - desc: "wrong type (last-price) by cli vs. given-time"
         operations:
           - test:
               id: 7cbe3cb4-1b23-44bb-8e5e-ba2c8991e589
               name: "price/ok/price-strict.sh: price-00"
               descriptions:
-                - desc: "No conversion"
+                - desc: "strict, No conversion"
+              references:
+                - ref: balance
+                - ref: balance-group
+                - ref: register
+                - ref: identity
+                - ref: equity
+          - test:
+              id: e9e2bc45-94d7-4eaa-9e0d-20667ac8a365
+              name: "tests/sh/price.sh"
+              descriptions:
+                - desc: "no target commodity match"
+              references:
+                - ref: balance
+                - ref: balance-group
+                - ref: register
+                - ref: identity
+                - ref: equity
+          - test:
+              id: 42297bb3-c816-496f-83a3-924f52702e42
+              name: "tests/sh/price.sh"
+              descriptions:
+                - desc: "cli: lookup-type none"
               references:
                 - ref: balance
                 - ref: balance-group
@@ -29,9 +67,30 @@ features:
       parent: 4d6f0dac-c202-45f4-9b95-7682d6c8df94
       subject: "Price: txn-time"
       tests:
+        operations:
           - test:
               id: 6ddcb0d4-7dc6-4909-a1b4-ecbb5a33a186
               name: "price/ok/price-strict.sh: price-01"
+              descriptions:
+                - desc: "strict, txn-time"
+              references:
+                - ref: balance
+                - ref: balance-group
+                - ref: register
+                - ref: identity
+                - ref: equity
+          - test:
+              id: 12f7784d-6319-40d7-9942-f8be219106a8
+              name: "tests/sh/price-multi.sh"
+              descriptions:
+                - desc: "multi-vp: txn-time, txn with multiple, missing comms"
+              references:
+                - ref: balance
+                - ref: balance-group
+                - ref: register
+          - test:
+              id: 29b8ecea-bb2b-4a66-b0a2-178cb7a9f1b4
+              name: "tests/sh/price.sh"
               descriptions:
                 - desc: "txn-time"
               references:
@@ -40,14 +99,107 @@ features:
                 - ref: register
                 - ref: identity
                 - ref: equity
+          - test:
+              id: 34716ab3-3dd8-4873-8af9-868b50b32bbd
+              name: "tests/sh/price-multi.sh"
+              descriptions:
+                - desc: "multi-vp: txn-time, txn with multiple comms"
+              references:
+                - ref: balance
+                - ref: balance-group
+                - ref: register
+          - test:
+              id: 616b5b97-ede1-4a8b-9767-d6c0ca5206d8
+              name: "tests/sh/price-multi-miss.sh"
+              descriptions:
+                - desc: "multi-miss-vp: txn-time, txn with multiple, missing comms"
+              references:
+                - ref: balance
+                - ref: balance-group
+                - ref: register
+          - test:
+              id: 6ad08423-c2d1-4667-9084-10920edfef4c
+              name: "tests/sh/price-multi.sh"
+              descriptions:
+                - desc: "multi-vp: txn-time, unit-price"
+              references:
+                - ref: balance
+                - ref: balance-group
+                - ref: register
+          - test:
+              id: 75c3846c-c291-4957-a5dd-80d0f282e084
+              name: "tests/sh/price-multi.sh"
+              descriptions:
+                - desc: "multi-value: txn-time"
+              references:
+                - ref: balance
+                - ref: balance-group
+                - ref: register
+          - test:
+              id: 83bf6ec0-a100-490b-9cff-e58775554963
+              name: "tests/sh/price-multi.sh"
+              descriptions:
+                - desc: "multi-vp: txn-time, inverted unit-price"
+              references:
+                - ref: balance
+                - ref: balance-group
+                - ref: register
+          - test:
+              id: 9fa4a692-1e00-4eec-9773-886ef79cb740
+              name: "tests/sh/price-multi-miss.sh"
+              descriptions:
+                - desc: "multi-miss-vp: txn-time, unit-price"
+              references:
+                - ref: balance
+                - ref: balance-group
+                - ref: register
+          - test:
+              id: ac8bb20d-8802-401d-9130-2349f0643aee
+              name: "tests/sh/price-multi-miss.sh"
+              descriptions:
+                - desc: "multi, miss: txn-time"
+              references:
+                - ref: balance
+                - ref: balance-group
+                - ref: register
+          - test:
+              id: cbfdf9ae-5f57-4e64-80b4-feec41b127f4
+              name: "tests/sh/price-multi.sh"
+              descriptions:
+                - desc: "multi-odd: txn-time, txns with diff multiple comms, price times"
+              references:
+                - ref: balance
+                - ref: balance-group
+                - ref: register
   - feature:
       id: c86c55e1-e0ae-4e99-9ef1-be16b4f7a797
       parent: 4d6f0dac-c202-45f4-9b95-7682d6c8df94
       subject: "Price: last-price"
       tests:
+        operations:
           - test:
               id: af19f8e7-a6f2-4f64-8c5a-b774dba4f58c
               name: "price/ok/price-strict.sh: price-02"
+              descriptions:
+                - desc: "strict, last-price"
+              references:
+                - ref: balance
+                - ref: balance-group
+                - ref: register
+                - ref: identity
+                - ref: equity
+          - test:
+              id: 3029acb0-ff10-4095-895a-7fa0ba272fb5
+              name: "tests/sh/price-multi.sh"
+              descriptions:
+                - desc: "multi-timestamps: last-price, prices with timestamps and offsets"
+              references:
+                - ref: balance
+                - ref: balance-group
+                - ref: register
+          - test:
+              id: 8a29b198-6e87-4d4c-885d-a888be485d92
+              name: "tests/sh/price.sh"
               descriptions:
                 - desc: "last-price"
               references:
@@ -61,24 +213,19 @@ features:
       parent: 4d6f0dac-c202-45f4-9b95-7682d6c8df94
       subject: "Price: given-time"
       tests:
+        errors:
+          - error:
+              id: ccccb29e-3229-4461-abfd-ae6ad65058a6
+              name: "tests/sh/price-errors.sh"
+              descriptions:
+                - desc: "given time, no timestamp"
+        operations:
           - test:
               id: 4075e741-605b-4e67-ab7d-0d13f38956ca
               name: "price/ok/price-strict.sh: price-03"
               descriptions:
                 - desc: "given-time"
                 - desc: "filter: ts-end"
-              references:
-                - ref: balance
-                - ref: balance-group
-                - ref: register
-                - ref: identity
-                - ref: equity
-          - test:
-              id: 0c600957-5c15-42d0-9bb9-b618ad7d597f
-              name: "price/ok/price-strict.sh: price-04"
-              descriptions:
-                - desc: "TODO: This feature is not implemented"
-                - desc: "conv: filter: ts-end > last txn-ts"
               references:
                 - ref: balance
                 - ref: balance-group
@@ -113,6 +260,66 @@ features:
               name: "price/ok/price-strict.sh: price-07"
               descriptions:
                 - desc: "given-time after last available price, e.g. == last-price"
+              references:
+                - ref: balance
+                - ref: balance-group
+                - ref: register
+                - ref: identity
+                - ref: equity
+          - test:
+              id: 06a2355b-3567-45ed-b071-dd397febc97f
+              name: "tests/sh/price-multi.sh"
+              descriptions:
+                - desc: "multi-value: txn commodity is target commodity"
+              references:
+                - ref: balance
+                - ref: balance-group
+                - ref: register
+          - test:
+              id: 0c600957-5c15-42d0-9bb9-b618ad7d597f
+              name: "tests/sh/price-strict.sh"
+              descriptions:
+                - desc: "strict, given-time, filter"
+              references:
+                - ref: balance
+                - ref: balance-group
+                - ref: register
+                - ref: identity
+                - ref: equity
+          - test:
+              id: 0c659e24-542e-43c9-9bc6-65b39dd0c611
+              name: "tests/sh/price-multi.sh"
+              descriptions:
+                - desc: "multi-value: txn-filter, single commodity"
+              references:
+                - ref: balance
+                - ref: balance-group
+                - ref: register
+                - ref: identity
+                - ref: equity
+          - test:
+              id: 83d831d5-5947-4906-9bf0-d561c6c48349
+              name: "tests/sh/price-multi.sh"
+              descriptions:
+                - desc: "multi, lookup none"
+              references:
+                - ref: balance
+                - ref: balance-group
+                - ref: register
+          - test:
+              id: a060c24f-92cd-4b44-9b7a-7152cfa59eb7
+              name: "tests/sh/price-multi.sh"
+              descriptions:
+                - desc: "multi-value: given-time"
+              references:
+                - ref: balance
+                - ref: balance-group
+                - ref: register
+          - test:
+              id: e767afa7-cd1e-4979-a76a-a1371a5b2a90
+              name: "tests/sh/price.sh"
+              descriptions:
+                - desc: "given-time"
               references:
                 - ref: balance
                 - ref: balance-group

@@ -47,7 +47,7 @@ features:
         errors:
           - error:
               id: 0c1a7d18-90eb-4f2b-b8b6-9bc36cd5ff73
-              name: tests/commodity/ex/TxnException-mixed-comm.exec
+              name: tackler-core/src/parser/tests/tackler_txns.rs
               desc: Check that mixed commodities are not accepted
         operations:
           - test:
@@ -224,11 +224,11 @@ features:
               desc: "perr: missing value pos value"
           - error:
               id: edf1c7b6-fac6-4b58-8b5b-6c37b59609f5
-              name: tests/commodity/ex/CommodityException-mixed-valpos-01.exec
+              name: tackler-core/src/parser/tests/tackler_txns.rs
               desc: Mixed commodities with value position (third commodity)
           - error:
               id: 8994ca76-615f-4977-bb48-299f85b2b861
-              name: tests/commodity/ex/CommodityException-mixed-valpos-02.exec
+              name: tackler-core/src/parser/tests/tackler_txns.rs
               desc: Mixed commodities with value position (original commodity)
         operations:
           - test:
@@ -350,15 +350,15 @@ features:
         errors:
           - error:
               id: 561ca500-ec5b-41b5-8466-eb82362a06ea
-              name: tests/commodity/ex/CommodityException-empty-postcomm.exec
-              desc: "Empty/missing posting commodity"
+              name: tests/sh/commodity-errors.sh
+              desc: "Empty posting commodity"
           - error:
               id: 429c3406-2b73-4b8b-8b62-bd27cd2bb351
-              name: tests/commodity/ex/CommodityException-unknown-postcomm.exec
+              name: tests/sh/commodity-errors.sh
               desc: "Unknown posting commodity"
           - error:
               id: 40592a4d-54b4-4270-807f-8bd31b122a08
-              name: tests/commodity/ex/CommodityException-unknown-txncomm.exec
+              name: tests/sh/commodity-errors.sh
               desc: "Unknown txn commodity"
         operations:
           - test:

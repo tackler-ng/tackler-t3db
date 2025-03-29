@@ -53,39 +53,39 @@ features:
               desc: "git: cli err: fs.glob + git.dir"
           - error:
               id: c233295d-08b9-49b5-b384-634fc8432e64
-              name: tests/core/ex/TacklerException-git-err-commit-01.exec
+              name: tests/sh/core-errors.sh
               desc: commit not found
           - error:
               id: aeb11f77-ba35-400f-bdae-50d6ebb7e098
-              name: tests/core/ex/TacklerException-git-err-commit-02.exec
+              name: tests/sh/core-errors.sh
               desc: malformed sha1 (commit)
           - error:
               id: 7cb6af2e-3061-4867-96e3-ee175b87a114
-              name: tests/core/ex/TacklerException-git-err-commit-03.exec
+              name: tests/sh/core-errors.sh
               desc: can not resolve commit
           - error:
               id: 4b507e08-b90e-4a6f-9c6b-4fef7c58d9fe
-              name: tests/core/ex/TacklerException-git-err-ref-01.exec
+              name: tests/sh/core-errors.sh
               desc: ref is not found
           - error:
               id: 14b7e8eb-d168-48b2-86e7-8d922f306ad0
-              name: tests/core/ex/TacklerException-git-err-ref-02.exec
+              name: tests/sh/core-errors.sh
               desc: ref format is invalid
           - error:
               id: 5c0a2e2c-f82c-400a-a9bb-bc7b83010b3c
-              name: tests/core/ex/TacklerException-git-linktxn-01.exec
+              name: tests/sh/core-errors.sh
               desc: link inside repository, not supported
           - error:
               id: b0116db0-dd2b-40fb-976e-ee28118bc1e8
-              name: tests/core/ex/TacklerException-git-not-git-repo-01.exec
+              name: tests/sh/core-errors.sh
               desc: not git repository
           - error:
               id: 4569085c-04a8-4330-9c03-d07ea0935f22
-              name: tests/core/ex/TacklerException-git-repo-01.exec
+              name: tests/sh/core-errors.sh
               desc: repository is not found
           - error:
               id: 25452d77-aae5-414c-a6a6-bd60f090731e
-              name: tests/core/ex/TacklerParseException-git-error-01.exec
+              name: tests/sh/core-errors.sh
               desc: parser error with shard data
           - error:
               id: a32df7bb-b499-4f7b-98c8-5103ceac82fb

@@ -2,14 +2,6 @@ features:
   - feature:
       id: f61ad04a-34fd-44f2-a721-8d541fb45180
       subject: "Txn Header Syntax"
-      tests:
-        operations:
-          - test:
-              id: 370393e9-bc2f-4aa1-a81c-08d536487fe7
-              name: "tests/compat/ok/journal-v1v2-01.exec"
-              descriptions:
-                - desc: "Ignored (phase-2): Journal v1v2 compatibility test vector"
-
   - feature:
       id: f1d42a7c-4f74-44f7-923d-abbd72b55a71
       parent: f61ad04a-34fd-44f2-a721-8d541fb45180

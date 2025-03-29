@@ -9,14 +9,4 @@ features:
               desc: "new setting"
           - test:
               refid: af6d111d-5b01-40ad-8da2-98f26dacc4f3
-              desc: "old setting"
-          - test:
-              id: 890cf82b-6e7b-4fc3-9d4d-4d8f09156493
-              name: SettingsTest
-              descriptions:
-                - desc: "Accounts: new and deprecated CoA settings defined at same time"
-          - test:
-              id: f3ad24ca-3e01-49bd-b392-ebd676d95166
-              name: core/ex/ConfigurationException-settings-coa.exec
-              descriptions:
-                - desc: "new and deprecated CoA is defined at the same time"
+              desc: "Override configured storage by command line (fs -> git)"
