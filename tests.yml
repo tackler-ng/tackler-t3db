@@ -273,28 +273,6 @@ features:
           - test:
               refid: 289df07b-a047-488f-bbe0-4d61cce21421
 
-  - feature:
-      id: ebc16b71-b5df-46f7-bba6-e0d9ac37d6ee
-      parent: 75b0fc6d-0af7-4244-b8df-e99019678818
-      subject: "conf: reporting.console"
-      tests:
-        operations:
-          - test:
-              id: 940ed68b-7f1c-41fe-bab9-aefd8cf60b3a
-              name: tests/cli/ok/console-on-01.exec
-              descriptions:
-                - desc: "conf: console on"
-                - desc: "validate stdout + stderr"
-          - test:
-              id: e01a2d45-9977-4089-8a54-e29368b2d5cf
-              name: tests/cli/ok/console-on-02.exec
-              descriptions:
-                - desc: "conf: console off"
-                - desc: "validate stdout + stderr"
-          - test:
-              refid: ba71f292-cc3e-406f-991e-8dd82a7cf87c
-              name: tests/parser/ok/basic.exec
-
 ### conf: reports.balance
   - feature:
       id: 9f348a4c-7d6d-4c64-8f67-da34b63b916a
@@ -1107,6 +1085,11 @@ features:
               name: "tests/sh/new-and-init.sh"
               descriptions:
                 - desc: "new with price, strict"
+          - test:
+              id: 1586e27f-3bc2-44b9-b4b4-9a23f747c837
+              name: "tests/sh/new-and-init.sh"
+              descriptions:
+                - desc: "new with strict and equity"
   - feature:
       id: a20466fa-996e-4561-95b6-bff205ab7cf0
       subject: "cli: init journal"
@@ -1193,19 +1176,23 @@ features:
 
   - feature:
       id: d78b7fec-502e-404e-b5d2-8551f96bcf8c
-      subject: "cli: args: reporting.console"
+      subject: "cli: reporting on console"
       tests:
+        errors:
+          - error:
+              id: 33c4fd0b-03c7-48bc-b4cd-0aac72e11beb
+              name: tests/sh/reporting-errors.sh
+              desc: "console output with export"
         operations:
           - test:
               id: fe7017ec-8c26-463b-bf6f-9c2d3cd83220
-              name: tests/reporting/ok/cli-args-04.exec
+              name: tests/sh/reporting-ok.sh
               descriptions:
-                - desc: --reporting.console=true
+                - desc: check reporting on console
               references:
                 - ref: balance
                 - ref: balance-group
                 - ref: register
-                - ref: identity
 
   - feature:
       id: ed988446-3e8c-4dd5-a0f4-d02c1a145e2e
