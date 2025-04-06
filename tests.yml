@@ -193,16 +193,6 @@ features:
               references:
                 - ref: identity
 
-### conf: basedir
-  - feature:
-      id: 4d7f9feb-2d2f-4c50-b195-60b024bc9999
-      parent: 75b0fc6d-0af7-4244-b8df-e99019678818
-      subject: "conf: basedir"
-      tests:
-        operations:
-          - test:
-              refid: ba71f292-cc3e-406f-991e-8dd82a7cf87c
-
 ### conf: input.txn
   - feature:
       id: b3f82d40-1e18-4457-8050-61759a0c0cac
@@ -1204,19 +1194,6 @@ features:
               refid: 82fe2414-9e20-45da-8f7f-6f21ae8c71f2
               descriptions:
                 - desc: "CLI Args: --reporting.reports, --reporting.accounts"
-
-  - feature:
-      id: 4d07602f-c3f2-4a26-9166-3f371e6670d2
-      subject: "cli: args: basedir"
-      tests:
-        operations:
-          - test:
-              id: cd54250a-8af2-4daa-9d8e-7870b5987da9
-              name: tests/cli/ok/unknown-acc-01.exec
-              descriptions:
-                - desc: --basedir
-              references:
-                - ref: identity
 
   - feature:
       id: 84ef7d9c-ca37-4e8d-90ef-704adb2740bd

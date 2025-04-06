@@ -1,0 +1,45 @@
+features:
+  - feature:
+      id: cb7f968e-61f4-43d2-b2d8-d08f179d5fd7
+      subject: "Flat Balance"
+      tests:
+        operations:
+          - test:
+              id: cdd2d0a0-3e6d-42e3-9cae-b4797a23fe66
+              name: "tests/sh/audit.sh"
+              descriptions:
+                - desc: "Flat Balance compatibility guardian"
+
+  - feature:
+      id: 55cbf642-7d2b-4a68-9eed-4cd97066b2be
+      parent: cb7f968e-61f4-43d2-b2d8-d08f179d5fd7
+      subject: "Flat Balance Report"
+      tests:
+        errors:
+          - error:
+              id: 9e41344d-6561-4641-bbb8-faf636ed9e7d
+              name: "tests/sh/tep-1016-errors.sh"
+              desc: "conf: balance, unknown type"
+        operations:
+          - test:
+              id: 8d9b68a7-32f6-451d-ab74-08f03016f7c7
+              name: "tests/sh/tep-1016.sh"
+              descriptions:
+                - desc: "bal.type = flat, balgrp.type = tree"
+  - feature:
+      id: eac0e587-2232-42ed-9569-d1026d762e60
+      parent: cb7f968e-61f4-43d2-b2d8-d08f179d5fd7
+      subject: "Flat Balance Group Report"
+      tests:
+        errors:
+          - error:
+              id: a597e639-2f2c-42ae-b453-9cafedc7150c
+              name: "tests/sh/tep-1016-errors.sh"
+              desc: "conf: balance-group, unknown type"
+        operations:
+          - test:
+              id: 4bf2653c-7772-45fe-a613-11617215ad2b
+              name: "tests/sh/tep-1016.sh"
+              descriptions:
+                - desc: "bal.type = tree, balgrp.type = flat"
+

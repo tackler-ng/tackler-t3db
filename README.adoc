@@ -97,6 +97,10 @@ link:./tests-1015.yml[T3DB for TEP-1015]::
 
 * Commodity Price Data Support
 
+link:./tests-1016.yml[T3DB for TEP-1016]::
+
+* Flat Balance and Balance Group Reports
+
 
 link:./tests-tmpl.yml[Template for T3DB entry]
 

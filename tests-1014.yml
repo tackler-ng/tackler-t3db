@@ -45,21 +45,6 @@ features:
               name: SettingsTest
               descriptions:
                 - desc: "default account, strict = true"
-          - test:
-              id: 70182e6d-cd63-4f36-85be-66778132aace
-              name: EquitySettingsTest
-              descriptions:
-                - desc: "defaults"
-          - test:
-              id: 19d938ba-908d-4157-9d63-b33652ce8ace
-              name: EquitySettingsTest
-              descriptions:
-                - desc: "cfg settings"
-          - test:
-              id: b236b5e8-7016-4d72-a413-3254eee3c8c3
-              name: EquitySettingsTest
-              descriptions:
-                - desc: "apply parameters"
   - feature:
       id: 347c6faf-e3c4-465d-8980-c44435c12039
       parent: e5434121-1112-4379-8729-3504912f56a8

@@ -47,9 +47,16 @@ features:
         errors:
           - error:
               id: a11c536e-ce20-4e2b-8abf-cd8a47cdaf07
-              name: tests/cli/ex/AccountException-unknown-acc-01.exec
+              name: tests/sh/cli-errors.sh
               desc: Unknown account name (no entry in CoA)
         operations:
+          - test:
+              id: cd54250a-8af2-4daa-9d8e-7870b5987da9
+              name: tests/sh/cli.sh
+              descriptions:
+                - desc: "Unknow account name, strict = false"
+              references:
+                - ref: identity
           - test:
               refid: e997a1a0-4f96-4212-a565-31565c87a7a2
           - test:
