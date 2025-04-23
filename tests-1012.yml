@@ -22,8 +22,6 @@ features:
                 refid: c97ac3bf-7561-4a79-9d00-a582d9949ea8
             - test:
                 refid: 2173f557-4f58-4483-b959-dc29f4f98ce4
-            - test:
-                refid: 973d19f4-a9b8-4cc5-8cdc-19c01c0edb17
           registry:
             - test:
                 refid: 93651962-6b61-4fd6-941a-339abd87ec73
@@ -35,8 +33,6 @@ features:
                 refid: 982dc27f-674e-47a7-bb20-cef06ea6b5fe
             - test:
                 refid: c97ac3bf-7561-4a79-9d00-a582d9949ea8
-            - test:
-                refid: 973d19f4-a9b8-4cc5-8cdc-19c01c0edb17
         operations:
           - test:
               id: 04016f94-3f5c-49cd-b1a2-cbe66af123c5
@@ -124,13 +120,6 @@ features:
                   formats: txn, json
                 - ref: register
                   formats: txt
-          - test:
-              id: 973d19f4-a9b8-4cc5-8cdc-19c01c0edb17
-              name: reporting/time-and-zones/offset.exec
-              descriptions:
-                - desc: "report-timezone as offset"
-                - desc: "balgrp: date"
-                - desc: "register: full"
   - feature:
       id: d8d63ca4-9675-4287-ba4e-53b6a329e390
       parent: c085aec4-8e0f-4571-bf50-0dc16dba411e
