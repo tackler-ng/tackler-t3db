@@ -42,4 +42,19 @@ features:
               name: "tests/sh/tep-1016.sh"
               descriptions:
                 - desc: "bal.type = tree, balgrp.type = flat"
+          - test:
+              id: 895d913f-649d-4779-82dd-5da27ff48423
+              name: "tests/sh/tep-1016.sh"
+              descriptions:
+                - desc: "flat with commodity (valpos-01)"
+          - test:
+              id: a5d7770b-1680-4f90-a7cd-7de38dbb1487
+              name: "tests/sh/tep-1016.sh"
+              descriptions:
+                - desc: "flat with commodity (valpos-02)"
+          - test:
+              id: e2eadf49-1ac4-4b7a-84b3-fa600d628ad6
+              name: "tests/sh/tep-1016.sh"
+              descriptions:
+                - desc: "flat with commodity (valpos-03)"
 
