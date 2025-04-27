@@ -368,7 +368,7 @@ features:
         errors:
           - error:
               id: fd2e49c0-bb60-4f5b-8ddd-f3745fcc6015
-              name: tackler-core/src/parser/tests/tackler_txns.rs
+              name: core::parser/tests/tackler_txns.rs
               desc: Ensure that code is not over eager in case of txn syntax error
         operations:
           - test:
@@ -382,7 +382,17 @@ features:
               references:
                 - ref: register
                 - ref: identity
-
+          - test:
+              id: 0ac0ac5a-2a90-4bab-a044-38e13e96c443
+              name: core::parser/parts/txn_header_code.rs::test_parse_txn_code
+              descriptions:
+                - desc: ascii
+                - desc: numbers
+                - desc: special chars
+                - desc: spaces
+                - desc: latin
+                - desc: kanji
+                - desc: symbols
   - feature:
       id: bcf52e63-e70e-4b94-b8f1-7321a6a353e8
       subject: "txn: description"
@@ -390,11 +400,15 @@ features:
         operations:
           - test:
               id: 641c44ab-0ac3-4247-b16e-a4acea5a78ec
-              name: TacklerParserTest
+              name: core::parser/parts/txn_header_desc.rs::test_parse_txn_description
               descriptions:
-                - desc: input2Txns(str)
+                - desc: ascii
+                - desc: numbers
+                - desc: special chars
+                - desc: spaces
                 - desc: latin
                 - desc: kanji
+                - desc: symbols
           - test:
               id: 2564946b-3afb-4edc-9ee5-3c0f37baa1a1
               name: tests/parser/ok/par-02.exec
@@ -460,7 +474,24 @@ features:
               desc: "comment on the first line"
 
   - feature:
+      id: 43c95649-79ed-4b0a-9784-58543ac83333
+      subject: "Comments"
+      tests:
+        operations:
+          - test:
+              id: 0e43478d-6c0e-4f1d-89c9-08057ece02ce
+              name: core::parser/parts/comments.rs::test_p_comment
+              descriptions:
+                - desc: ascii
+                - desc: numbers
+                - desc: special chars
+                - desc: spaces
+                - desc: latin
+                - desc: kanji
+                - desc: symbols
+  - feature:
       id: 1d7b6ba2-5a63-481f-9c74-527e203e5f4b
+      parent: 43c95649-79ed-4b0a-9784-58543ac83333
       subject: "Comments, txn -level"
       tests:
         operations:
@@ -481,6 +512,7 @@ features:
 
   - feature:
       id: 81149412-4c82-41fb-861c-ab0c224975ce
+      parent: 43c95649-79ed-4b0a-9784-58543ac83333
       subject: "Comments, posting -level"
       tests:
         operations:

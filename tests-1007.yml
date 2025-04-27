@@ -99,7 +99,21 @@ features:
                   formats: txt, json
                 - ref: register
                   formats: txt, json
-
+          - test:
+              id: 5c34d752-8d17-40df-be91-5dc1b107478e
+              name: tests/audit/ok/audit-1E1-03.exec
+              descriptions:
+                - desc: "Account Selector Checksum"
+                - desc: "Full haystack regex match with simple selector"
+                - desc: "Sorting order of selectors"
+                - desc: "Empty register report"
+              references:
+                - ref: balance
+                  formats: txt, json
+                - ref: balance-group
+                  formats: txt, json
+                - ref: register
+                  formats: txt, json
           - test:
               id: 4e8e1d79-bbb5-4e6f-9072-d7e3c5b8c7ea
               name: tests/audit/ok/audit-1E2-01.exec
@@ -133,20 +147,6 @@ features:
                   formats: txt, json
                 - ref: register
                   formats: txt, json
-          - test:
-              id: 5c34d752-8d17-40df-be91-5dc1b107478e
-              name: tests/audit/ok/audit-1E1-03.exec
-              descriptions:
-                - desc: "Account Selector Checksum"
-                - desc: "Full haystack regex match with simple selector"
-                - desc: "Sorting order of selectors"
-              references:
-                - ref: balance
-                  formats: txt
-                - ref: balance-group
-                  formats: txt
-                - ref: register
-                  formats: txt
           - test:
               refid: 85d16b5a-cde9-40d3-9a37-3b7ba7ee7049
               descriptions:
