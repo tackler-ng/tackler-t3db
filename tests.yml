@@ -1123,6 +1123,28 @@ features:
               descriptions:
                 - desc: "init journal"
   - feature:
+      id: c4c66599-781c-4eb0-b610-211560186751
+      subject: "cli: console output"
+      tests:
+        operations:
+          - test:
+              id: fd250432-9b13-4cdd-83a1-1aedff1593ed
+              name: "tests/sh/cli.sh console-03"
+              descriptions:
+                - desc: "UTF-8 data"
+              references:
+                - ref: balance
+                  formats: txt, json
+                - ref: balance-group
+                  formats: txt, json
+                - ref: register
+                  formats: txt, json
+                - ref: identity
+                  formats: txn
+                - ref: equity
+                  formats: txn
+
+  - feature:
       id: 32f0054b-6c82-42e4-a109-4f624b7e1d4d
       subject: "cli: args: error handling"
       tests:

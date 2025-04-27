@@ -45,33 +45,6 @@ features:
               name: ReportLikeTest
               descriptions:
                 - desc: "verify rounding mode HALF_UP 2/2"
-
-          - test:
-              id: cee50970-c0af-491d-b61f-6956bc413970
-              name: "tests/reporting/ok/scale-01-min.exec"
-              descriptions:
-                - desc: "report type specific min scale settings"
-              references:
-                - ref: balance
-                  formats: txt, json
-                - ref: balance-group
-                  formats: txt, json
-                - ref: register
-                  formats: txt, json
-
-          - test:
-              id: 814654ee-83a8-466b-bcac-0b671d4ddf80
-              name: "tests/reporting/ok/scale-02-max.exec"
-              descriptions:
-                - desc: "report type specific max scale settings"
-              references:
-                - ref: balance
-                  formats: txt, json
-                - ref: balance-group
-                  formats: txt, json
-                - ref: register
-                  formats: txt, json
-
   - feature:
       id: a3e8a287-b8ef-41e5-86de-39805fcf729e
       parent: eb2816e7-7ccf-42a2-9a1a-99223dc431a3
