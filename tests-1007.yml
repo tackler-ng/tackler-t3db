@@ -2,7 +2,18 @@ features:
   - feature:
       id: 6278f9b8-3f98-4926-aa21-d660e03a34e0
       subject: "Assurance, Verification and Auditing"
-
+      tests:
+        operations:
+          - test:
+              id: 69502e1d-0c51-44bf-89e7-5f559c65f147
+              name: "tests/sh/audit.sh"
+              descriptions:
+                - desc: "audit and filter metadata with console"
+          - test:
+              id: f0782d7f-1626-45ef-bbdc-86bf833eb105
+              name: "tests/sh/audit.sh"
+              descriptions:
+                - desc: "audit metadata with console"
   - feature:
       id: ed1537a5-494c-4a86-b65c-d2a010297d17
       parents:

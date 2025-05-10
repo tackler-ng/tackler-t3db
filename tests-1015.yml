@@ -2,6 +2,13 @@ features:
   - feature:
       id: 98c2b696-d250-4141-bd82-c4126ec11c1d
       subject: "Price data support"
+      tests:
+        operations:
+          - test:
+              id: 02057635-5436-4457-b597-fa3f3e2e9df3
+              name: "tests/sh/price-strict.sh"
+              descriptions:
+                - desc: "price and filter metadata with console"
   - feature:
       id: 4d6f0dac-c202-45f4-9b95-7682d6c8df94
       parent: 98c2b696-d250-4141-bd82-c4126ec11c1d

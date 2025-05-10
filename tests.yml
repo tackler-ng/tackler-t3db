@@ -232,11 +232,9 @@ features:
   - feature:
       id: 57cd42b2-7319-42dd-a0be-809927f66bdd
       parent: 75b0fc6d-0af7-4244-b8df-e99019678818
-      subject: "conf: reporting.formats"
+      subject: "conf: report.formats"
       tests:
         operations:
-          - test:
-              refid: ed89d638-70fa-474c-b88f-be03df6231df
           - test:
               refid: a52914e4-0887-4255-abea-c0b457802f56
           - test:
@@ -1183,10 +1181,15 @@ features:
           - test:
               refid: 9f0d3896-ce0b-415b-8d96-ad40e5177b45
               desc: "--input.file"
+          - test:
+              id: 12c49a4f-b403-4f19-b167-cae6e38d4d0a
+              name: "tests/sh/audit.sh"
+              descriptions:
+                - desc: "file: overlay --input.file"
 
   - feature:
       id: db7ca808-4eef-44a9-b61e-3811c41b642a
-      subject: "cli: args: reports"
+      subject: "cli: --reports"
       tests:
         operations:
           - test:
@@ -1197,15 +1200,13 @@ features:
 
   - feature:
       id: 780ed0b3-cbb6-4bfb-82a5-c70ae94e2d15
-      subject: "cli: args: reporting.formats"
+      subject: "cli: --formats"
       tests:
         operations:
           - test:
-              refid: 8a7a8c60-aab9-4700-b081-9804c1ec537f
+              refid: b5fd85fe-94b1-4ef8-8ab7-e8b22acb4d63
           - test:
-              refid: c5493e99-d0f3-49b3-8450-3ae6ef970b10
-          - test:
-              refid: 0dae7dfd-c816-4a77-afff-a372e1802026
+              refid: ed89d638-70fa-474c-b88f-be03df6231df
 
   - feature:
       id: 6b8b9f4a-20e8-45e7-b0ea-1daf99d6589b
@@ -1273,6 +1274,16 @@ features:
                 - desc: "fs -> git"
               references:
                 - ref: identity
+          - test:
+              id: 1a646767-9591-4ab1-8c14-fb11bff7d2b6
+              name: "tests/sh/audit.sh"
+              descriptions:
+                - desc: "fs: full overlay, missing fs"
+          - test:
+              id: 1151b193-8af2-4d1d-87b7-0002f1d20df5
+              name: "tests/sh/audit.sh"
+              descriptions:
+                - desc: "fs: full overlay"
 
   - feature:
       id: 7ae035a1-3ebc-43f4-87af-0439e2d3b2e5
@@ -1281,6 +1292,11 @@ features:
         operations:
           - test:
               refid: 31a128f5-d1a2-4d93-beee-6599344ece57
+          - test:
+              id: e301910e-f8f9-43ac-9010-d74558efe829
+              name: "tests/sh/audit.sh"
+              descriptions:
+                - desc: "fs: partial overlay, --input.fs.dir"
 
   - feature:
       id: 78889e89-065a-4bd0-bcd6-9db2d2d6e8cf

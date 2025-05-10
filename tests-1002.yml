@@ -199,6 +199,36 @@ features:
                 - ref: balance
                 - ref: balance-group
                 - ref: register
+          - test:
+              id: 07a5ec54-d278-4769-a916-1ddfe220b67e
+              name: "tests/sh/audit.sh"
+              descriptions:
+                - desc: "check that input.git.dir doesn't act as wildcard"
+          - test:
+              id: 1292763d-9828-4998-ba2b-84fe2968cdf7
+              name: "tests/sh/audit.sh"
+              descriptions:
+                - desc: "git: partial overlay, cfg:storage = fs, and  --input.storage = git"
+          - test:
+              id: 53fd2388-c7f0-430c-8f8b-c9cf6e3334f5
+              name: "tests/sh/audit.sh"
+              descriptions:
+                - desc: "git: partial overlay (git.ref); full overlay, with no git cfg"
+          - test:
+              id: 649a72b6-e6cf-467c-9f7c-e3f49bb0d98c
+              name: "tests/sh/audit.sh"
+              descriptions:
+                - desc: "git: full overlay (especially git dir)"
+          - test:
+              id: 66197e67-35b5-425f-bad4-dd510d48dbee
+              name: "tests/sh/audit.sh"
+              descriptions:
+                - desc: "git: full overlay and invalid base configuration (git)"
+          - test:
+              id: b46c8b92-714a-4ccb-b93d-8fc9f91c8c02
+              name: "tests/sh/audit.sh"
+              descriptions:
+                - desc: "git: partial overlay (git dir + git ref)"
   - feature:
       id: 6bbdc218-ab67-415e-9dfa-c1528098cbfa
       parent: 06b4a9b1-f48c-4b33-8811-1f32cdc44d7b
