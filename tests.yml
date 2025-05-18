@@ -1168,10 +1168,16 @@ features:
       id: ddcd813e-7396-43e7-8bfd-76e3dcbe04f0
       subject: "cli: args: cfg file path"
       tests:
+        errors:
+          - error:
+              id: e00bd60a-dc39-4d36-ac1e-243efc8489b2
+              name: "tests/sh/cli-errors.sh"
+              descriptions:
+                - desc: "missing config with command"
         operations:
           - test:
               refid: ba71f292-cc3e-406f-991e-8dd82a7cf87c
-              desc: --cfg
+              desc: --config
 
   - feature:
       id: 5ec11c1f-ba61-4ca8-8166-1c722ab6a7da
@@ -1192,6 +1198,11 @@ features:
       subject: "cli: --reports"
       tests:
         operations:
+          - test:
+              id: 50e18830-07dc-4666-ab44-d2968865421e
+              name: "tests/sh/cli.sh"
+              descriptions:
+                - desc: "report command"
           - test:
               id: 9f0d3896-ce0b-415b-8d96-ad40e5177b45
               refid: 1d2c22c1-e3fa-4cd4-a526-45318c15d13e
