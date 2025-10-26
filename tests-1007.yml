@@ -24,32 +24,32 @@ features:
         errors:
           - error:
               id: 1edf6ced-8bfb-49e8-a307-c05cf7f6cc7e
-              name: SettingsTest
+              name: tackler-core/src/kernel/hash.rs::hasher_err
               descriptions:
                 - desc: "rejects invalid algorithms"
 
         operations:
           - test:
               id: 1b6876c4-3ef2-43f4-b14b-1bdaa56180fa
-              name: SettingsTest
+              name: tackler-core/src/kernel/hash.rs::hash_functions
               descriptions:
-                - desc: "accepts valid jdk8 algorithms"
+                - desc: "accepts valid hashing algorithms"
 
   - feature:
       id: cb44b81f-bb69-471f-bacf-e1acf4eaa4e4
       parent: 6278f9b8-3f98-4926-aa21-d660e03a34e0
-      subject: "Txn Set and Account Selector checksum"
+      subject: "Txn Set and checksums"
       tests:
         errors:
           - error:
               id: cc98b4da-aa26-44e1-ba76-ca702a99add6
-              name: TxnDataTest
+              name: txns_checksum::txns_missing_uuid
               descriptions:
                 - desc: "detects missing uuid from existing txns"
 
           - error:
               id: 0a31ea4f-cb4c-4b5a-8ea4-1786feeb32a4
-              name: TxnDataTest
+              name: txns_checksum::txns_duplicate_uuid
               descriptions:
                 - desc: "detects duplicate uuid from existing txns"
 
@@ -73,10 +73,22 @@ features:
 
         operations:
           - test:
-              id: 0e76295f-aee6-47bc-ae6f-7fba5ce6d818
-              name: TxnDataTest
+              id: fed114d9-5b82-4821-81a4-38782f927d74
+              name: txns_checksum::txns_append_checksum
               descriptions:
+                - desc: "Checksum when appending TxnSets"
                 - desc: "Uppercase txn UUIDs result same txn set checksum as lowercase"
+
+          - test:
+              id: 5b193a18-9341-4c33-bc88-003411c4c2fc
+              name: git_txns:txndata_append_truncates_metadata
+              descriptions:
+                - desc: "TxnData append resets metadata"
+
+          - test:
+              id: 0e76295f-aee6-47bc-ae6f-7fba5ce6d818
+              name: txns_checksum::txns_checksum_with_filters
+              descriptions:
                 - desc: "reports correct checksum after multiple filtering steps"
 
           - test:

@@ -53,85 +53,32 @@ features:
         errors:
           - error:
               id: 2cc212bb-f167-4d42-a0e8-8124b3704e1c
-              name: SettingsTest
+              name: tackler-core/src/config/items.rs
               descriptions:
-                - desc: "doesn't accept negative min"
+                - desc: "too large min"
 
           - error:
               id: 698ef5a8-2d4c-4d5a-87b1-9df12051e2d7
-              name: SettingsTest
+              name: tackler-core/src/config/items.rs
               descriptions:
-                - desc: "doesn't accept negative max"
+                - desc: "too large max"
 
           - error:
               id: 999044e8-b3e6-447e-a15d-22e23cfdee1b
-              name: SettingsTest
+              name: tackler-core/src/config/items.rs
               descriptions:
-                - desc: "doesn't accept max < min"
+                - desc: "max < min"
 
         operations:
           - test:
               id: 1076287b-22f2-4601-8e7e-f2899b71533d
-              name: SettingsTest
+              name: tackler-core/src/config/items.rs
               descriptions:
                 - desc: "accepts zeros"
 
           - test:
               id: 02663b5d-1471-471a-befc-5f093e6993ee
-              name: SettingsTest
+              name: tackler-core/src/config/items.rs
               descriptions:
                 - desc: "accepts valid values"
 
-  - feature:
-      id: 07f7efff-e9ec-4e6f-bb21-80ac829d2cda
-      parent: eb2816e7-7ccf-42a2-9a1a-99223dc431a3
-      subject: "balance settings with min/max"
-      tests:
-        operations:
-          - test:
-              id: 47d834f5-5d2d-44e9-b42d-58f28a95beb8
-              name: SettingsTest
-              descriptions:
-                - desc: "uses default values"
-
-          - test:
-              id: 28df6f80-1331-4283-9ea5-8d3101644a9a
-              name: SettingsTest
-              descriptions:
-                - desc: "accepts report specific values"
-
-  - feature:
-      id: 1e80c257-1047-4f4e-91fb-884d3c08add3
-      parent: eb2816e7-7ccf-42a2-9a1a-99223dc431a3
-      subject: "balance-group settings with min/max"
-      tests:
-        operations:
-          - test:
-              id: 50a8cf81-0996-4896-b6a1-c6e64083966f
-              name: SettingsTest
-              descriptions:
-                - desc: "uses default values"
-
-          - test:
-              id: f338b972-800f-458a-b607-5ac5ca98ac26
-              name: SettingsTest
-              descriptions:
-                - desc: "accepts report specific values"
-
-  - feature:
-      id: 9d814986-4b35-4b8d-a662-9b156a31dbc7
-      parent: eb2816e7-7ccf-42a2-9a1a-99223dc431a3
-      subject: "register settings with min/max"
-      tests:
-        operations:
-          - test:
-              id: 7db0c6d8-4834-4c33-be82-3a76ef615538
-              name: SettingsTest
-              descriptions:
-                - desc: "uses default values"
-
-          - test:
-              id: f8840c32-9165-4539-a4ad-09b421b5d4ec
-              name: SettingsTest
-              descriptions:
-                - desc: "accepts report specific values"

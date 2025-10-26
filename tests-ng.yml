@@ -73,7 +73,7 @@ features:
               id: 3bca6d7b-e515-42d8-b65b-2780b0c0d7e0
               name: "tackler-core/src/filter/txn/txn_description.rs"
               descriptions:
-                - desc: "TxnFilter::TxnFilterTxnCode"
+                - desc: "TxnFilter::TxnFilterTxnDescription"
           - test:
               id: 3d3d06cb-fcf2-422a-b57d-1bdb08f7d65e
               name: "tackler-core/src/filter/txn/txn_ts_end.rs"

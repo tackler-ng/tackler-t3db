@@ -1260,7 +1260,26 @@ features:
               refid: 82fe2414-9e20-45da-8f7f-6f21ae8c71f2
               descriptions:
                 - desc: "CLI Args: --reporting.reports, --reporting.accounts"
-
+          - test:
+              id: 3dfdbcbb-e2d8-4426-8a9e-92a6a6805b9a
+              name: "tests/sh/reporting-ok.sh"
+              descriptions:
+                - desc: "select all: override global account selector"
+          - test:
+              id: 692eff1f-0dcf-401d-8ca6-25e54cb5cb5f
+              name: "tests/sh/reporting-ok.sh"
+              descriptions:
+                - desc: "select all: balance"
+          - test:
+              id: e9bd7c0f-66e0-4523-a846-5338ed4d5e1a
+              name: "tests/sh/reporting-ok.sh"
+              descriptions:
+                - desc: "select all: balance-group"
+          - test:
+              id: 12aa0f4f-430b-42cc-8640-46afa0ab9db9
+              name: "tests/sh/reporting-ok.sh"
+              descriptions:
+                - desc: "select all: register"
   - feature:
       id: 84ef7d9c-ca37-4e8d-90ef-704adb2740bd
       subject: "cli: args: input.storage: flip-flop used storage"
@@ -1334,4 +1353,44 @@ features:
               id: f04577b6-49b2-460f-92f6-7886a4b49152
               name: tests/cli/ex/NoSuchFileException-output-not-found-01.exec
               desc: output path not found
+  - feature:
+      id: 3be0d247-852c-403f-81e1-5ec7ccb09abe
+      subject: "cli: args: --invert"
+      tests:
+        operations:
+          - test:
+              id: 04d8dc19-c90e-466d-8d61-6054b3b9a935
+              name: "tests/sh/price-multi-miss.sh"
+              descriptions:
+                - desc: "multi-miss-vp: inverted, txn-time, txn with multiple, missing comms"
+          - test:
+              id: 37ddb210-3f02-45b4-9b63-187279d08865
+              name: "tests/sh/audit.sh"
+              descriptions:
+                - desc: "baseline, not inverted"
+          - test:
+              id: 604ca9e5-94d4-40b6-89cb-afac2460fd12
+              name: "tests/sh/commodity.sh"
+              descriptions:
+                - desc: "inverted"
+          - test:
+              id: 6bfd4573-e99b-4e49-a7ba-c2882d46f06b
+              name: "tests/sh/audit.sh"
+              descriptions:
+                - desc: "inverted"
+          - test:
+              id: 7e92948e-88c2-4c7b-bdfd-efd4b46f556f
+              name: "tests/sh/price.sh"
+              descriptions:
+                - desc: "inverted, last-price"
+          - test:
+              id: 9cfb09ef-c7f8-4470-ad16-46abf2708e26
+              name: "tests/sh/audit.sh"
+              descriptions:
+                - desc: "inverted, only one account-tree"
+          - test:
+              id: d76b0fa0-1fbb-4540-9c80-08b3cc6f6710
+              name: "tests/sh/price-multi.sh"
+              descriptions:
+                - desc: "multi-value: inverted, txn-time"
 ### CLI END

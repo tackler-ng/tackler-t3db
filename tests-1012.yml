@@ -128,22 +128,22 @@ features:
         operations:
           - test:
               id: f0e2f23c-7cc6-4610-80c0-8f1e3a6555c7
-              name: SettingsTest
+              name: tackler-api/src/txn_ts.rs::timestampstyle_full
               descriptions:
                 - desc: "style: full"
           - test:
               id: abec5673-f55e-427d-9db6-cdf865100a21
-              name: SettingsTest
+              name: tackler-api/src/txn_ts.rs::timestampstyle_seconds
               descriptions:
                 - desc: "style: seconds"
           - test:
               id: 0b8dd80a-e826-4107-9892-7db04e3a9f59
-              name: SettingsTest
+              name: tackler-api/src/txn_ts.rs::timestampstyle_date
               descriptions:
                 - desc: "style: date"
           - test:
               id: fc6c569a-1ab4-4fde-bed6-1593116f617d
-              name: SettingsTest
+              name: tackler-api/src/txn_ts.rs::timestampstyle_invalid
               descriptions:
                 - desc: "rejects invalid style"
           - test:
