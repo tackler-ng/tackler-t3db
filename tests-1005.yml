@@ -426,16 +426,6 @@ features:
               desc: "reject JSON OR filter with only one filter"
         operations:
           - test:
-              id: 2b56249e-4dff-445f-b30c-427c7c29e8e1
-              name: TxnFilterJsonTest
-              descriptions:
-                - desc: "encode metadata as JSON"
-          - test:
-              id: f26027f1-b9d5-4f87-a173-9ffac1b1b862
-              name: TxnFilterJsonTest
-              descriptions:
-                - desc: "encode metadata as TEXT"
-          - test:
               id: 283d64f6-4508-48ac-89a3-e70e25784330
               name: TxnFilterJsonTest
               descriptions:

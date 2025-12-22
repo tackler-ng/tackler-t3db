@@ -76,12 +76,6 @@ features:
       tests:
         operations:
           - test:
-              refid: 2b56249e-4dff-445f-b30c-427c7c29e8e1
-              desc: "encode metadata as JSON"
-          - test:
-              refid: f26027f1-b9d5-4f87-a173-9ffac1b1b862
-              desc: "encode metadata as TEXT"
-          - test:
               id: f3d05712-3c6e-482c-bfb9-8b559b8f6eb9
               name: TxnFilterTxnTagsTest
               descriptions:
