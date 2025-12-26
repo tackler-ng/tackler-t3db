@@ -175,7 +175,7 @@ features:
               id: 1d6f4fb9-bcfd-41ae-8720-2584ec2f4087
               name: TxnFilterBBoxLatLonAltTest
               descriptions:
-                - desc: "detects illegal arguments"
+                - desc: "detects illegal arguments (2D of 3D)"
                 - desc: "North vs. south, northern hemisphere"
                 - desc: "North vs. south, southern hemisphere"
                 - desc: "Over equator"
@@ -185,6 +185,15 @@ features:
                 - desc: "west beyond 180th meridian, west"
                 - desc: "East beyond 180th meridian, east"
                 - desc: "East beyond 180th meridian, west"
+          - test:
+              id: 426a47cd-2373-48a6-b241-2e9627ed26fb
+              name: TxnFilterBBoxLatLonAltTest
+              descriptions:
+                - desc: "detects illegal arguments (3D)"
+                - desc: "above surface: height is less than depth."
+                - desc: "under surface: height is less than depth."
+                - desc: "above and under surface: height is less than depth."
+                - desc: "Depth is beyond center of Earth."
           - test:
               id: 92232872-cea2-4787-8ba4-892d958796cb
               name: TxnFilterBBoxLatLonAltTest
