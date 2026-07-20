@@ -1,0 +1,100 @@
+features:
+  - feature:
+      id: 4e5f753f-d124-45e9-b703-6e2a588d3e85
+      subject: "external reference id"
+  - feature:
+      id: 33282cc5-f722-49e4-9f58-c5ff519d18d3
+      parent: 4e5f753f-d124-45e9-b703-6e2a588d3e85
+      subject: "ext-id basic functionality"
+      tests:
+        errors:
+          - error:
+              id: ad8b853a-8cf1-4e9d-a25e-c011907c86bf
+              name: "parser/tests/txn_extid.rs"
+              descriptions:
+                - desc: "detect missing ext-id data"
+        operations:
+          - test:
+              id: 4044420a-6df9-42c8-809a-ed3221b5e640
+              name: "tests/sh/extid.sh"
+              descriptions:
+                - desc: "duplicates with missing kernel.ext-id conf"
+          - test:
+              id: 8d5321fd-92af-4a4d-934f-9c35c41f7b00
+              name: "tests/sh/extid.sh"
+              descriptions:
+                - desc: "no dups, unique false"
+          - test:
+              id: 4796a487-d903-4314-9fd5-73c9ebf9a86f
+              name: "tests/sh/extid.sh"
+              descriptions:
+                - desc: "no dups, unique true"
+          - test:
+              id: 0d0bb5f1-4d20-48ff-af64-da80ef9ac039
+              name: "tests/sh/extid.sh"
+              descriptions:
+                - desc: "identity round-trip"
+  - feature:
+      id: 9798c6d8-b07a-47ac-a463-e2e729c39fa6
+      parent: 4e5f753f-d124-45e9-b703-6e2a588d3e85
+      subject: "ext-id filters"
+      tests:
+        operations:
+          - test:
+              id: f5c2294f-074d-4cf5-a93e-8557e667574f
+              name: tackler-api/filters/txn/txn_extid.rs
+              descriptions:
+                - desc: "TxnExtId, full haystack match"
+          - test:
+              id: 250895f4-e228-4f40-baaf-51cea984f01f
+              name: tackler-api/filters/txn/txn_extid.rs
+              descriptions:
+                - desc: "TxnExtId, JSON"
+          - test:
+              id: a1bd4d35-644c-403a-9271-b856fcf82450
+              name: tackler-api/filters/txn/txn_extid.rs
+              descriptions:
+                - desc: "TxnExtId, Text"
+          - test:
+              id: 114cf7e0-5163-4607-8b13-e82e8ebdc076
+              name: filter/txn/txn_extid.rs
+              descriptions:
+                - desc: "filter by txn extid"
+          - test:
+              id: 5b2547e7-51eb-446c-abd0-0e00c8d9270f
+              name: filter/txn/txn_extid.rs
+              descriptions:
+                - desc: "TxnFilter::TxnFilterTxnExtId"
+  - feature:
+      id: 35f8b046-86b6-4acf-9442-437ec150664b
+      parent: 4e5f753f-d124-45e9-b703-6e2a588d3e85
+      subject: "kernel.ext-id.unique"
+      tests:
+        errors:
+          - error:
+              id: 22a82798-0fb5-45de-b31b-1755baa3e622
+              name: "tests/sh/extid-errors.sh"
+              descriptions:
+                - desc: "unique with duplicates"
+          - error:
+              id: c4905afd-ea7a-460f-8f0b-ab46803f63be
+              name: tackler-core/tests/txns_extid.rs
+              descriptions:
+                - desc: "try_from detects duplicate ext-ids"
+          - error:
+              id: 1c8f8fb1-d96b-4661-8597-7ddda75194d5
+              name: tackler-core/tests/txns_extid.rs
+              descriptions:
+                - desc: "append detects duplicate ext-ids"
+        operations:
+          - test:
+              id: f3c3f4fb-2c58-47d8-82a6-82b04a752e2e
+              name: tackler-core/tests/txns_extid.rs
+              descriptions:
+                - desc: "try_from accepts duplicate ext-ids"
+          - test:
+              id: 843948ac-6d7a-402e-9fe3-931615fd9565
+              name: tackler-core/tests/txns_extid.rs
+              descriptions:
+                - desc: "append accepts duplicate ext-ids"
+

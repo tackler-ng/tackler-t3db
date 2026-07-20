@@ -101,6 +101,9 @@ link:./tests-1016.yml[T3DB for TEP-1016]::
 
 * Flat Balance and Balance Group Reports
 
+link:./tests-1018.yml[T3DB for TEP-1018]::
+
+* Txn External ID
 
 link:./tests-tmpl.yml[Template for T3DB entry]
 
