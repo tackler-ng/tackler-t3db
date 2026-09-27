@@ -61,6 +61,29 @@ features:
               refid: e997a1a0-4f96-4212-a565-31565c87a7a2
           - test:
               refid: bc8f6399-fd7a-420a-8deb-9cc0ae97c9f6
+  - feature:
+      id: c3b007ca-a25b-4969-a397-cfeb0e536df3
+      parent: 893da4ec-5ce2-4108-b446-f86ab26a4c4c
+      subject: "Accounts export"
+      tests:
+        operations:
+          - test:
+              id: 2fe1dd09-fefc-4a19-ad2b-03bf77c73bf5
+              name: tests/sh/reporting-accounts.sh
+              descriptions:
+                - desc: "account selector doesn't afffect the account export"
+          - test:
+              id: 471c68df-734e-476c-80f1-aa7f2b170a81
+              name: tests/sh/reporting-accounts.sh
+              descriptions:
+                - desc: "account selector doesn't afffect the account export"
+                - desc: "sorting order of accounts in reports"
+          - test:
+              id: 5cf98224-cf9a-4455-90ea-9a0916c5ee2e
+              name: tests/sh/reporting-accounts.sh
+              descriptions:
+                - desc: "generated accounts.toml can be used as part of configuration"
+                - desc: "accounts export by configuration"
 
   - feature:
       id: bfc11481-21e2-4d12-8d9d-c4b434fd9228

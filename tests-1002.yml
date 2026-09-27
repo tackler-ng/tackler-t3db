@@ -54,7 +54,11 @@ features:
           - error:
               id: c233295d-08b9-49b5-b384-634fc8432e64
               name: tests/sh/core-errors.sh
-              desc: commit not found
+              desc: "commit not found (by ref)"
+          - error:
+              id: beed0077-33b6-441f-b7be-deca8080362d
+              name: tests/sh/core-errors.sh
+              desc: "commit not found (by commit)"
           - error:
               id: aeb11f77-ba35-400f-bdae-50d6ebb7e098
               name: tests/sh/core-errors.sh
