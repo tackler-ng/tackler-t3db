@@ -1,7 +1,11 @@
 features:
   - feature:
-      id: 22eba439-e94d-4f68-a002-e1549a7bab76
+      id: b95940b1-5b62-4260-b7d9-b9a6bac975a4
       subject: "Transaction Tags"
+  - feature:
+      id: 22eba439-e94d-4f68-a002-e1549a7bab76
+      parent: b95940b1-5b62-4260-b7d9-b9a6bac975a4
+      subject: "Txn Tags basic functionality"
       tests:
         reports:
           registry:
@@ -71,7 +75,7 @@ features:
                   formats: txt, json
   - feature:
       id: ec0a6249-1ae1-406e-babb-f4db8891f7bf
-      parent: c085aec4-8e0f-4571-bf50-0dc16dba411e
+      parent: b95940b1-5b62-4260-b7d9-b9a6bac975a4
       subject: "Txn Tag Filters"
       tests:
         operations:
